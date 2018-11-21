@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.JOB.mapping.userMapper">
+<select id="getUser" parameterType="int" resultType="com.JOB.domain.User">
+	select * from users where UserName=#{UserName}
+</select>
+<!--目前信息还没有修改-->
+<!-- 创建用户(Create) -->
+<insert id="addUser" parameterType="com.JOB.domain.User">
+	insert into users(name,age) values(#{name},#{age})
+</insert>
+<!-- 删除用户(Remove) -->
+<delete id="deleteUser" parameterType="int">
+	delete from users where id=#{id}
+</delete>
+<!-- 修改用户(Update) -->
+<update id="updateUser" parameterType="com.JOB.domain.User">
+	update users set name=#{name},age=#{age} where id=#{id}
+</update>
+<!-- 查询全部用户-->
+ <select id="getAllUsers" resultType="com.JOB.domain.User">
+ 	select * from users
+ </select>
+</mapper>
