@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tourism_System</title>
+	<link rel="stylesheet" href="login.css">
+</head>
+<body>
+	<div id="box">
+		<h2 class="pas_en">密码登陆</h2>
+		<div class="littal_box">
+			<form action="post" class="for">
+			    <div class="box_top">
+			    	 <span>用户名</span>
+			    	 <input type="text" value="" onchange="fnLogin()" placeholder="请输入6-12位字符" class="lis_1"  onfocus="if(placeholder == '请输入6-12位字符'){placeholder = '';};promptError.style.display='none';promptRight.style.display='none'" onblur="if(placeholder == ''){placeholder = '请输入6-12位字符';}; ">
+			    </div>
+			    <div class="prompt">
+			    	<p class="prompt_error">请输入6-12位字符</p>
+                    <p class="prompt_right">输入正确</p>
+			    </div>
+			  <!--   密码 -->
+			    <div class="box_center">
+			    	 <span>密码</span>
+			    	 <input type="password" class="lis_2">
+			    </div>
+			    <div class="prompt1">
+			    	<p class="prompt1_error">密码由数字和字母组成</p>
+                    <p class="prompt_right">输入正确</p>
+			    </div>
+			    <div class="box_bottom">
+			    	 <!-- <input type="submit" onclick="fnLogin()" class="lis_3" value="登陆"> -->
+			    	 <button type="button" onclick="fnLogin()" class="lis_3">登陆</button>
+			    </div>
+				<div class="hint">
+					<a href="#" class="hint1">忘记密码</a>
+					<a href="#" class="hint2">免费注册</a>
+				</div>			
+			</form>
+		</div>
+	</div>
+
+	<script>
+
+        var user = document.getElementsByClassName("lis_1")[0];
+        var pass = document.getElementsByClassName("lis_2")[0];
+        var promptError = document.getElementsByClassName("prompt_error")[0];
+
+        var promptRight = document.getElementsByClassName("prompt_right")[0]; 
+        function fnLogin() {
+        	if(user.value.length < 6 || user.value.length > 12) {
+                promptError.style.display = "block";
+            }else {
+                promptRight.style.display = "block"
+            }
+        }
+        function cipher() {
+        	 var reg = /\d|a-zA-Z/;
+        	 var returnValue = pass.value;
+        	 if(returnValue) {  
+        	 }
+        }
+	</script>
+</body>
+</html>
+</html>
