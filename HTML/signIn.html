@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>飞阁</title>
+	<link rel="stylesheet" href="../CSS/signIn.css">
+</head>
+<body>
+
+      <div class="box">
+
+	       <div class="centerBox">            <!-- 登陆注册固定框 --> 
+	           <div class="signIn">                <!-- 登陆 -->
+	           	     <button type="button" onclick="revolve()" class="bridge">注册</button>   <!-- 注册按钮 -->
+			         <div class="leftImg">          <!-- 左边图片 -->
+                       	  <ul class="gatherImg">              <!-- 图片轮播 -->
+						       <li><img src="../image/19f8a47b079bb47e6e064ce573959da4.jpg" class="box_li first" alt="你网络出问题了吧大哥" title="美景与你" /></li>
+							   <li><img src="../image/c3dedca942a32940136e09b6af7871ea.jpg" class="box_li" alt="你网络出问题了吧大哥" title="美景与你" /></li>
+							   <li><img src="../image/c9eb6e48eacb1c3e00bc36cb06f98973.jpg" class="box_li" alt="你网络出问题了吧大哥" title="美景与你" /></li>
+							   <li><img src="../image/860860a175f995f29e53467cf87aa2c0.jpg" class="box_li" alt="你网络出问题了吧大哥" title="美景与你" /></li>
+							   <li><img src="../image/f9795e0987465390cf15423bc3fbc23d.jpg" class="box_li" alt="你网络出问题了吧大哥" title="美景与你" /></li>
+						  </ul>							  
+					</div>
+					
+					 
+					 <div class="interface">       <!-- 右边登陆界面 -->
+
+			               <div class="logo">logo 飞阁</div>
+						   <div class="text">愿与你一路畅聊这风花雪月</div>
+						   <div class="scan">
+						       <form method="" action="">
+							        <div class="userNamePro">       <!-- 用户输入 -->
+							              <i class="userImg"></i>
+									      <input type="text" class="userName" placeholder="请输入用户名" onblur="verification(this.value)" onfocus="first(this.value,usertips)"> 
+                                          <div class="usertips"></div> 
+							        </div>
+
+									<div class="userPasswordPro">        <!-- 密码输入 -->
+									      <i class="passImg"></i>
+										  <input type="password" placeholder="请输入密码" class="userPassword" onblur="veriPass(this.value)" onfocus="first1(this.value,passtips)">
+									</div>
+									<div class="remanber">                <!-- 忘记密码，记住密码 -->
+									       <a href="javascript:" class="remanberPass">忘记密码</a>
+									      <input type="radio" value="记住密码" name="sex" class="remanberPro">记住密码	   
+									</div>
+									<button class="signPro" type="button" onclick="siginDisBut()">登陆</button><!-- 提交登陆 -->
+									                <!-- 提示文字框 -->
+									<div class="passtips"></div>
+							   </form>
+							   <div class="otherSign">       <!-- 其他登陆方式 -->
+							      <ul class="">
+								      <li class="iconText">其他登陆方式:</li>
+									  <li class="icon"><a href="javascript:"><img src=""/></a></li>
+									  <li class="icon"><a href="javascript:"><img src=""/></a></li>
+									  <li class="icon"><a href="javascript:"><img src=""/></a></li>
+									  <li class="icon"><a href="javascript:"><img src=""/></a></li>
+								  </ul>
+							   </div>
+						   </div>
+					 </div>
+					 
+			   </div>
+		         <div class="signUp">                 <!-- 注册 -->
+		       	         <div class="signupImg">       <!-- 注册的左边图片 -->
+		       	         	<h2 class="signupText">
+		       	         		  人生最好的旅游，<br>就是你在一个陌生的地方，<br>发现一种久违的感觉。
+		       	         	</h2>
+		       	         </div>
+		       	         <!-- 注册的左边图片文字 -->
+
+		       	         <div class="signupInter">                    <!-- 用户名注册 -->
+		       	         	 <h2 class="signupTheme">欢迎注册飞阁</h2>  
+		       	         	 <form action="" method="">
+		       	         	 <div class="signupNamePro">       
+		       	         	      <i class="tipsText">用户名</i>    <!-- 用户名提示文字 -->
+		       	         	 	  <input type="text" class="signupName" placeholder="请输入6-12位字符" onblur="verification1(this.value)">     <!-- 用户名输入 -->
+		       	         	 	  <div class="signupTips1"></div>      <!-- 错误提示语 -->
+		       	         	 </div>
+		       	         	 <div class="signupNamePro">
+		       	         	      <i class="tipsText">密码</i>
+		       	         	 	  <input type="text" class="signuppass" onblur="veriPass1(this.value)" placeholder="密码由数字和字母组成">
+		       	         	 	  <div class="signupTips2"></div>
+		       	         	 </div>
+		       	         	 <div class="signupNamePro">
+		       	         	      <i class="tipsText">邮箱</i>
+		       	         	 	  <input type="text" class="signupName" onblur="checkEmail(this.value)">
+		       	         	 	  <div class="signupTips3"></div>
+		       	         	 </div>
+		       	         	 <div class="signupNamePro">
+		       	         	      <i class="tipsText">电话</i>
+		       	         	 	  <input type="tel" class="signupName" onblur="checkPhone(this.value)">
+		       	         	 	  <div class="signupTips4"></div>
+		       	         	 </div>
+		       	         	 <div class="signupBirPro">
+		       	         	      <i class="tipsBirText">生日</i>
+		       	         	 	  <input type="date" class="birthday">   
+		       	         	 </div>
+		       	         	 <div class="signupGenderPro">
+		       	         	      <i class="tipsText">性别</i>
+		       	         	 	  <input type="radio" class="Gender" name="man" value="男性">男性
+		       	         	 	  <input type="radio" class="Gender" name="man" value="女性">女性
+		       	         	 </div>
+		       	         	 <div class="signupNiuPro">
+		       	         	 <button class="signupNiu" type="submit" onclick="sigupDisBut()">注册</button>
+		       	         	 </div>
+		       	         	 </form>
+		       	         	 <button type="button" onclick="revolve1()" class="bridge1">登陆</button>
+		       	         </div>      
+		         </div>           
+	       </div>
+	  </div>
+
+      <script type="text/javascript" src="../js/signIn.js">
+	  </script>
+	  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	  <script type="text/javascript">
+	         var userName = document.getElementsByClassName("userName")[0];
+	         var userPassword = document.getElementsByClassName("userPassword")[0];
+	         var usertips = document.getElementsByClassName("usertips")[0];
+	         var passtips = document.getElementsByClassName("passtips")[0];
+	         var signUp = document.getElementsByClassName("signUp")[0];
+	         var signIn = document.getElementsByClassName("signIn")[0];
+	         var signupImg = document.getElementsByClassName("signupImg")[0];
+	         var signupTips1 = document.getElementsByClassName("signupTips1")[0];
+	         var signupTips2 = document.getElementsByClassName("signupTips2")[0];
+	         var signupTips3 = document.getElementsByClassName("signupTips3")[0];
+	         var signupTips4 = document.getElementsByClassName("signupTips4")[0];
+	         var signPro = document.getElementsByClassName("signPro")[0];
+	         var signupNiu = document.getElementsByClassName("signupNiu")[0];
+	         var tips1 = "输入正确";
+	         var userError1 = "不可以以数字开头";
+	         var userError2 = "请输入6-12位字符";
+	         var passError1 = "请输入4-20位字符";
+	         var passError2 = "密码由数字和字母组成"; 
+	         var tips2 = "输入不能为空";
+	         var tips3 = "验证失败";
+	         var reg1 = /^[0-9]/;
+	         var reg2 = /^[A-Za-z0-9]+$/;
+	         var i = 2;
+	         function first(obj, UP) {
+	         	  if(obj == "") {
+	         	  	   UP.innerHTML = userError2;
+	         	  }
+	         }
+	         function first1(obj, UP) {
+	         	  if(obj == "") {
+	         	  	   UP.innerHTML = passError1;
+	         	  }
+	         }
+	          // 鼠标聚焦时出现的文字
+             function verification(obj) {
+             	  if(obj.length < 6 || obj.length > 12 ) {              //请输入6-12位字符
+             	 	  usertips.innerHTML = userError2;
+             	 	  usertips.style.color = "#f00";
+             	 }else if(obj != "" && reg1.test(obj)) {               //开头不能是数字，和不能为空
+             	 	  usertips.innerHTML = userError1;
+             	 	  usertips.style.color ="#f00";
+             	 }else{                                                 //输入正确
+             	 	  usertips.innerHTML = tips1;
+             	 	  usertips.style.color = "green"
+             	 }
+             };
+
+             function verification1(obj) {                               //注册用户名验证
+             	  if(obj.length < 6 || obj.length > 12 ) {              //请输入6-12位字符
+             	 	  signupTips1.innerHTML = userError2;
+             	 	  signupTips1.style.color = "#f00";
+             	 }else if(obj != "" && reg1.test(obj)) {               //开头不能是数字，和不能为空
+             	 	  signupTips1.innerHTML = userError1;
+             	 	  signupTips1.style.color ="#f00";
+             	 }else{                                                 //输入正确
+             	 	  signupTips1.innerHTML = tips1;
+             	 	  signupTips1.style.color = "green"
+             	 }
+             };
+             function veriPass(obj) {
+             	 if(obj.length < 4 || obj.length > 20) {                   //请输入4-20位字符
+             	 	   passtips.innerHTML = passError1;
+             	 	   passtips.style.color = "#f00";
+             	 }else if(obj != "" && !reg2.test(obj)) {               //不能为空，和由数字和字母组成
+             	 	   passtips.innerHTML = passError2;
+             	 	   passtips.style.color = "#f00";
+             	 }else{
+             	 	  passtips.innerHTML = tips1;
+             	 	  passtips.style.color = "green"
+             	 }
+             }
+             function veriPass1(obj) {
+             	 if(obj.length < 4 || obj.length > 20) {                   //请输入4-20位字符
+             	 	   signupTips2.innerHTML = passError1;
+             	 	   signupTips2.style.color = "#f00";
+             	 }else if(obj != "" && !reg2.test(obj)) {               //不能为空，和由数字和字母组成
+             	 	   signupTips2.innerHTML = passError2;
+             	 	   signupTips2.style.color = "#f00";
+             	 }else{
+             	 	  signupTips2.innerHTML = tips1;
+             	 	  signupTips2.style.color = "green"
+             	 }
+             }
+             // 验证信息
+              
+             
+            function revolve() {
+                  signUp.style.left = "0";
+                  signIn.style.left = "-100%";
+                  signupImg.style.display = "block";
+            }
+            // 登陆切换到注册
+
+             function revolve1() {
+                  signUp.style.left = "100%";
+                  signIn.style.left = "0";     
+            }
+            // 登陆切换到注册
+
+            function checkEmail(obj) {
+            	  var reg = /^\w+@[a-z0-9]+\.[a-z]+$/i; //正则表达式
+　　              
+　              　if(obj == ""){ //输入不能为空
+　　　　               signupTips3.innerHTML = tips2;
+                       signupTips3.style.color = "red";
+　                }else if(!reg.test(obj)){ //正则验证不通过，格式不对
+　　　　               signupTips3.innerHTML = tips3;
+                       signupTips3.style.color = "red";
+                　}else{
+　　　                 signupTips3.innerHTML = tips1;
+                       signupTips3.style.color = "green";
+　　              }
+           }
+             // 注册邮箱验证
+
+
+           function checkPhone(obj) {
+           	    var reg = /^1[34578]\d{9}$/;
+           	    if(obj == ""){ //输入不能为空
+　　　　               signupTips4.innerHTML = tips2;
+                       signupTips4.style.color = "red";
+　                }else if(!reg.test(obj)){ //正则验证不通过，格式不对
+　　　　               signupTips4.innerHTML = tips3;
+                       signupTips4.style.color = "red";
+                　}else{
+　　　                 signupTips4.innerHTML = tips1;
+                       signupTips4.style.color = "green";
+　　              }
+           }
+           // 验证手机号码
+
+           function siginDisBut() {
+                 $(".signPro").attr("disabled", true);
+           }
+           function sigupDisBut(){
+                 $(".signupNiu").attr("disabled", true).attr("type", "button");
+           }
+	  </script>
+</body>
+</html>
