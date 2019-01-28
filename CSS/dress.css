@@ -1,0 +1,111 @@
+    /*衣服风格展现开始*/
+.dress{
+	width:100%;
+	position:relative;
+	border:1px solid black;
+	padding:20px;
+}
+.dress_Img{
+	width:60%;
+	height:100%;
+	border:1px solid black;
+}
+.dress_country, .dress_style, .dress_more{
+	position:absolute;
+}
+.dress_address{
+	position:absolute;
+
+	color:#c6c6c6;
+	top:80px;
+}
+.dress_country{
+	font-size: 50px;
+	font-weight: 550;
+	color:#00f;
+	top:110px;
+}
+.dress_style{
+	font-size: 35px;
+	font-weight: 520;
+	top:220px;
+}
+.dress_more{
+	width:150px;
+	height:40px;
+	line-height: 40px;
+	border:2px solid #00f;
+	color:#00f;
+	font-weight: 520;
+	bottom:100px;
+	text-align: center;
+	background-color: rgba(255,255,255,0.2)
+}
+      /*衣服风格展现结束*/
+
+      /*衣服构造开始*/
+      
+.dress_introduce{
+	width:100%;
+	height:468px;
+    position:relative;
+
+}
+.dressInt_Img{
+	width:800px;
+	height:100%;
+	display: block;
+	margin:auto;
+}
+.dressInt_jacket, .dressInt_pants{
+	width:80px;
+	height:40px;
+	line-height:40px;
+	background-color: #333c4e;
+	color:#fff;
+	text-align: center;
+	position:absolute;
+}
+#dressInt_first{
+	top:97px;
+}
+#dressInt_next{
+	top:214px;
+}
+#dressInt_last{
+	top:321px;
+}
+
+     /*衣服构造结束*/
+
+     /*尊重服饰文化开始*/
+.dress_respect{
+	width:100%;
+	height:500px;
+	display: inline-block;
+	position:relative;
+}
+.dressRes_theme{
+	margin-top: 50px;
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	font-size: 30px;
+	font-weight: 550;
+	text-align: center;
+	color:#00f;
+}
+.dressResTex_text{
+	width:400px;
+	margin: auto;
+	line-height:45px;
+	letter-spacing: 3px;
+	text-indent: 2em;
+	margin-top: 20px;
+}
+      /*尊重服饰文化结束*/
+
+
+    
+
+

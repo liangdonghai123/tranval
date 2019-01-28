@@ -4,11 +4,11 @@
 	font-size:16px;
 }
 i{
-	text-decoration:normal;
+	font-style:normal;
 }
 a{
 	text-decoration: none;
-	color:#fff;
+	color:#000;
 }
 ul{
     list-style-type: none;
@@ -23,7 +23,10 @@ body,html{
 .top_box{
 	width:100%;
 	height:100%;
-	background-image:url(../image/homeImg/微信图片_20181220145920.jpg);
+    min-width: 900px;
+    min-height: 500px;
+	position:relative;
+	background-image:url(../image/home_Img/首屏背景图.jpg);
 	background-size:100% 100%;
 }
    /*头部框架*/
@@ -34,28 +37,38 @@ body,html{
 	padding:40px;
 	height:22px;
 	box-sizing:border-box;
-	font-size: 22px;
-	color:rgb(159,166,182);
+	color:#fff;
 	display: flex;
 	justify-content:space-around;
 
 }
+.topNav::after{
+	content: "";
+	clear:both;
+	display:block;
+}
      /*导航栏框*/
 
 .navCenter{
-	height:22px;
+	height:40px;
 	margin:auto;
 }
 .list{
-	height:25px;
+	height:40px;
+	line-height: 40px;
+	width:auto;
 	float:left;
-	margin-left:30px;
+	margin-left:40px;
     position:relative;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
 }
       /*中间导航*/
 
 .navRight{
-    height:25px;
+    height:40px;
+    line-height: 40px;
 }
 .right{
 	height:25px;
@@ -63,4 +76,639 @@ body,html{
     margin-right:10px;
 }
     /*登陆注册样式*/
+
+    /*头部链接样式开始*/
+ .link{
+ 	color:#fff;
+ 	font-size:20px;
+ }
+    /*头部链接结束*/
+    
+    /*导航栏底部划线开始*/
+.line{
+	position:absolute;
+	bottom:0;
+	left:0;
+	height:3px;
+	width:0;
+}
+.home_interact{             /*首页下滑线颜色*/
+	background-color:#33f;
+}
+.homepage:hover{           
+    color:#33f;
+}
+.trip_interact{             /*出行下滑线颜色*/
+	background-color:#FF00FF;
+}
+.trip:hover{
+	color:#f0f;
+}
+.hote_interact{            /*旅游团下滑线颜色*/   
+	background-color:#3f0;
+}
+.hotel:hover{
+	color:#3f0;
+}
+.grou_interact{             /*酒店下滑线颜色*/
+	background-color:#0ff;
+}
+.group:hover{
+	color:#0ff;
+}
+.coun_interact{             /*国家游下滑线颜色*/
+	background-color:#f90;
+}
+.country:hover{
+	color:#f90;
+}
+    /*导航栏底部划线结束*/
+
+    /*文字标题部分开始*/
+.topText{
+	position:relative;
+	margin-top:150px;
+}
+.bigText{
+	font-size:50px;
+	font-weight:bold;
+	text-align:center;
+	height:120px;
+	line-height:60px;
+	letter-spacing:3px;
+	color:#fff;
+}
+
+   /*文字标题部分结束*/
+
+   /*搜索栏部分开始*/
+.search_bar{
+    margin:auto;
+    width:420px;
+	position:relative;
+	margin-top:50px;
+}
+
+.searchPro{
+	padding-left:20px;
+	width:400px;
+	height:40px;
+	border:0;
+	border-radius: 4px;
+	box-shadow:0 0 5px black;
+	background-color:rgba(255,255,255,0.8);
+}
+.butSearch{
+	position:absolute;
+	right:0;
+	top:0;
+	border-radius:0 4px 4px 0;
+	width:70px;
+	font-size: 20px;
+	height:40px;
+	line-height: 40px;
+	background-color:#006cfc;
+	color:#fff;
+	border:#999999;
+}
+      /*搜索栏结束*/
+
+    /*下一页辅助按钮*/
+.next{
+	position:relative;
+	display:block;
+	width:10px;
+	height:80px;
+	margin:auto;
+	margin-top:60px;
+	overflow: hidden;
+}
+
+.lower1, .lower2, .lower3{
+	width:15px;
+	height:20px;
+	position:absolute;
+	transition:top 0.7s;
+}
+.lower1{
+	top:0;
+}
+.lower2{
+	top:20px;
+}
+.lower3{
+	top:40px;
+}
+   /*下一页辅助按钮完成*/
+
+
+  /*首页提示开始*/
+.homepage_tips{
+	width:100%;
+	height:100%;
+	min-width: 900px;
+    min-height: 500px;
+	position:relative;
+}
+.civilization{
+	display: block;
+	width:100%;
+	height:200px;
+	line-height: 200px;
+	text-align: center;
+	font-size:40px;
+	font-weight:bold;
+	color:#006cfc;
+}
+.civilization_box{
+	width:100%;
+	display:flex;
+	justify-content:space-around;
+}
+.careful{
+	float:left;
+	width:250px;
+	height:250px;
+}
+.civili{
+	display: block;
+	width:250px;
+	height:250px;
+	position:relative;
+	background-size:100% 100%;
+}
+.etiquette{
+	background-image:url(../image/home_Img/孔子文明图.jpg);
+}
+.civili_text{
+	display:block;
+    width:250px;
+    position:absolute;
+    left: 50%;
+    top:50%;
+    margin-left:-80px;
+    font-size:25px;
+    font-weight:bold;
+    letter-spacing:20px;
+    color:#006cfc;
+}
+.diet{
+	width:200px;
+	margin:auto;
+	background-image:url(../image/home_Img/饮食规范.jpg)
+}
+.dress{
+	background-image:url(../image/home_Img/文明穿着.jpg)
+}
+
+/*首页提示结束*/
+
+
+  /*旅游景区开始*/
+ .scenic_spot{           /*整个旅游景区框架*/
+ 	width:100%;
+ 	min-width: 900px;
+    min-height: 500px;
+ 	position:relative;
+ }
+.churchyard,
+.abroad_short,
+.abroad_long,
+.theme_tourism,
+.self_driving{             /*地区导航栏*/
+	width:100%;
+	padding:20px 0 20px 148px;
+	box-sizing:border-box;
+	
+}
+.churchyard::after{
+	content:"";
+	clear:both;
+	display:block;
+}
+.abroad_short::after{
+	content:"";
+	clear:both;
+	display:block;
+}
+.abroad_long::after{
+	content:"";
+	clear:both;
+	display:block;
+}
+.theme_tourism::after{
+	content:"";
+	clear:both;
+	display:block;
+}
+.churchyard i,
+.abroad_short i,
+.abroad_long i,
+.theme_tourism i,
+.self_driving i{
+	 color:#006cfc;
+	 font-size:25px;
+	 font-weight:bold;
+	 float: left;
+	 margin-right:30px;
+}
+.area{
+	 width:55px;
+	 height:23px;
+	 line-height: 23px;
+	 float: left;
+	 text-align: center;
+     padding-top:10px;
+}
+
+.churchyard_scen,
+.abroad_scen,
+.theme_scen,
+.self_scen{
+	width:75%;
+	margin:auto;
+	margin-bottom:20px;
+}
+.churchyard_scen ul,
+.abroad_scen ul,
+.theme_scen ul,
+.self_scen ul{
+	width:100%;
+	display:flex;
+	justify-content:space-around;
+}
+.scenery{
+	width:200px;
+	height:250px;
+	margin-left:20px;
+}
+.local{
+	overflow:hidden;
+	display: block;
+	position:relative;
+	width:100%;
+	height:100%;
+	border-radius: 5px 5px 0 0;
+	box-shadow: 0 0 5px black;
+}
+.scenery_Img{
+	width:100%;
+	height:80%;
+	background-size: 100% 100%;
+	background-position: 0% 0%;
+	background-repeat: no-repeat;
+	position:relative;
+}
+ /*境内旅游图片*/
+.wusong{
+    background-image:url(../image/home_Img/雾凇岛.jpeg);
+}
+.haerbin{
+	background-image:url(../image/home_Img/境内旅游_哈尔滨.jpg);
+}
+.xuexiang{
+	background-image:url(../image/home_Img/境内旅游_中国雪乡.jpg);
+}
+.yalibu{
+	background-image:url(../image/home_Img/境内旅游_亚力布.jpeg);
+}
+.mojie{
+	background-image:url(../image/home_Img/境内旅游_魔界.jpg);
+}
+.songhuahu{
+	background-image:url(../image/home_Img/境内旅游_松花湖.jpg);
+}
+.senlin{
+	background-image:url(../image/home_Img/境内旅游_东北原始森林.jpg);
+}
+.changbaishan{
+	background-image:url(../image/home_Img/境内旅游_长白山.jpg);
+}
+/*境外短线图片*/
+.nailiang{
+	background-image:url(../image/home_Img/境外短游_日本奈良.jpg);
+}
+.fushishan{
+	background-image:url(../image/home_Img/境外短游_日本富士山.jpg);
+}
+.daban{
+	background-image:url(../image/home_Img/境外短游_日本大阪.jpg);
+}
+.jinze{
+	background-image:url(../image/home_Img/境外短游_日本金泽.jpg);
+}
+.benzhou{
+	background-image:url(../image/home_Img/境外短游_日本本州.jpg);
+}
+.liancang{
+	background-image:url(../image/home_Img/境外短游_日本镰仓.jpeg);
+}
+.chongsheng{
+	background-image:url(../image/home_Img/境外短游_日本冲绳.jpg);
+}
+.jingdu{
+	background-image:url(../image/home_Img/境外短游_日本京都.jpg);
+}
+/*境外长线图片*/
+.bingdao{
+	background-image:url(../image/home_Img/境外长线_英国冰岛.jpg);
+}
+.niujin{
+	background-image:url(../image/home_Img/境外长线_英国牛津.jpg);
+}
+.yinggelan{
+	background-image:url(../image/home_Img/境外长线_英国英格兰.jpg);
+}
+.sugelan{
+	background-image:url(../image/home_Img/境外长线_英国苏格兰.jpg);
+}
+.lundun{
+	background-image:url(../image/home_Img/境外长线_英国伦敦.jpg);
+}
+.beiaierlan{
+	background-image:url(../image/home_Img/境外长线_英国北爱尔兰.jpg);
+}
+.wenshachengbao{
+	background-image:url(../image/home_Img/境外长线_英国温莎城堡.jpg);
+}
+.taiwushihe{
+	background-image:url(../image/home_Img/境外长线_英国泰晤士河.jpg);
+}
+/*主题旅游图片*/
+.gaoxiong{
+	background-image:url(../image/home_Img/主题旅游_高雄.jpg);
+}
+.yunnan{
+	background-image:url(../image/home_Img/主题旅游_云南.jpg);
+}
+.xinjiapo{
+	background-image:url(../image/home_Img/主题旅游_新加坡.jpg);
+}
+.haerbin{
+	background-image:url(../image/home_Img/主题旅游_哈尔滨.jpg);
+}
+.shaba{
+	background-image:url(../image/home_Img/主题旅游_沙巴.jpg);
+}
+.malaixiya{ 
+	background-image:url(../image/home_Img/主题旅游_马来西亚.jpg);
+}
+.changlong{
+	background-image:url(../image/home_Img/主题旅游_长隆.jpg);
+}
+.dishini{
+	background-image:url(../image/home_Img/主题旅游_迪士尼.jpg);
+}
+/*自驾游图片*/
+.huangshi{
+	background-image:url(../image/home_Img/自驾游_黄石公园.png);
+}
+.gubao{
+	background-image:url(../image/home_Img/自驾游_古堡.jpg);
+}
+.xizang{
+	background-image:url(../image/home_Img/自驾游_西藏.jpg);
+}
+.xinxilan{
+	background-image:url(../image/home_Img/自驾游_新西兰.jpg);
+}
+.sanya{
+	background-image:url(../image/home_Img/自驾游_三亚.jpg);
+}
+.xibu{
+	background-image:url(../image/home_Img/自驾游_美国西部.jpg);
+}
+.lanzhou{
+	background-image:url(../image/home_Img/自驾游_兰州.jpg);
+}
+.daocheng{
+	background-image:url(../image/home_Img/自驾游_稻城.jpg);
+}
+.introduce{
+   background-color: rgba(255,255,255,0.6);
+   position: absolute;
+   bottom:0;
+   left:0;
+   width:100%;
+   height:44px;
+   line-height:22px;
+   font-size: 16px;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    overflow: hidden;
+    padding-left:5px;
+}
+.wusong_fence{
+	width:100%;
+	height:20%;
+	background-color:#f8f8f8;
+	padding:10px 5px;
+	box-sizing:border-box;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+.money{
+	font-size:25px;
+	color:#F40;
+	float: left;
+}
+.praise{
+	height:33px;
+	line-height: 33px;
+   font-size:15px;
+   color:#c6c6c6;
+   float: right;
+}
+   
+   /*旅游安全提示开始*/
+.security{             /*左边文字表述开始*/
+	width:100%;
+	height:100%;
+	background-color:#006cfc;
+	color:#fff;
+}
+.security_left{
+    padding-left:30px;
+    padding-top:100px;
+    box-sizing:border-box;
+	width:50%;
+	float:left;
+}
+.security_right{
+	width:50%;
+	height:100%;
+	float:right;
+	display: flex;
+}
+.security_theme{
+	font-size: 35px;
+    margin-bottom: 30px;
+}
+.security_subtitle{
+    font-size:24px;
+    margin-bottom:30px;
+}
+.security_text{
+	line-height:35px;
+	letter-spacing:3px;
+	margin-bottom: 80px
+}
+.security_link{
+	display: block;
+	width:150px;
+	font-size: 16px;
+	height:35px;
+	line-height: 35px;
+	text-align: center;
+	color: #fff;
+	background-color:#066cfc;
+	border:1px solid #fff;
+	border-radius:40px;
+}/*左边文字表述结束*/
+ 
+.security_Img{
+	width:400px;
+	height:220px;
+	box-sizing:border-box;
+	overflow:hidden;
+	margin:auto;
+	padding-top:220px;
+	background-image:url(../image/home_Img/安全提示页图片链接.jpg);
+	background-size:100% 100%;
+	border-radius: 5px;
+	box-shadow: 0 0 5px black;
+}   
+     /*旅游安全提示结束*/
+
+      /*旅游攻略开始*/
+.strategy{
+	width:100%;
+	height:100%;
+	margin-bottom:1.5%;
+}
+.strategy_theme{
+	margin-top:50px; 
+	font-size:35px;
+	width:100%;
+	height:100px;
+	line-height:100px;
+	color:#006cfc;
+	text-align: center;
+}
+.strategy_comment{
+	width:100%;
+	height:80%;
+}
+.strategy_comJment ul{
+	height:100%;
+	width:100%;
+}
+.strategy_list{
+	float: left;
+	margin-left: 3%;
+	width:29.33%;
+	height:100%;
+}
+.strategy_link{
+	display: block;
+    width:100%;
+    height:100%;
+    box-shadow:0 0 5px black;
+}
+.strategy_Img{
+	width:100%;
+	height:240px;
+	background-size: 100% 100%;
+}
+.strategy_haerbin{
+	background-image:url(../image/home_Img/旅游攻略_哈尔滨.jpg);
+}
+.strategy_xinxilan{
+	background-image:url(../image/home_Img/旅游攻略_新西兰.jpg);
+}
+.strategy_yunnan{
+	background-image:url(../image/home_Img/旅游攻略_云南.jpg);
+}
+.strategy_text{
+	width:100%;
+	height:55%;
+	padding:20px 20px;
+	box-sizing:border-box;
+	background-color: #f8f8f8;
+}
+.strategy_text h1{
+	height:60px;
+	line-height:30px;
+	font-size:22px;
+	margin-bottom: 30px;
+	display: -webkit-box;
+	-webkit-line-clamp:2;
+	overflow: hidden;
+	-webkit-box-orient:vertical;
+}
+.strategy_text p{
+    letter-spacing: 3px;
+    height:96px;
+    line-height: 24px;
+    display: -webkit-box;
+	-webkit-line-clamp:4;
+	overflow: hidden;
+	-webkit-box-orient:vertical;
+	color:#a4abae;
+}
+      /*旅游攻略结束*/
+
+          /*网页结尾开始*/
+.ending{
+	width:100%;
+	height:250px;
+	background-color: #333c4e;
+
+}
+
+.ending_explain_one, .ending_explain_two{
+	width:19%;
+	height:250px;
+	float: left;
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+.ending_suggest{
+	width:62%;
+	height:250px;
+	float: left;
+    padding-top:40px;
+    box-sizing:border-box;
+}
+.ending_explain_link{
+    display: block;
+    height:40px;
+    line-height:40px;
+    color:#fff;
+}
+.ending_suggest_text{
+	width:100%;
+	text-align:center;
+	height:100px;
+	line-height: 100px;
+	font-size: 35px;
+	color:#fff;
+	letter-spacing: 2px;
+}
+.ending_suggest_link{
+	display: block;
+	width:190px;
+	height:40px;
+	line-height: 40px;
+	border:2px solid #fff;
+	background-color:#a11e21;
+	border-radius: 40px;
+	color:#fff;
+	text-align: center;
+	margin:auto;
+}
 

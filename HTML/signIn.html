@@ -70,10 +70,10 @@
 
 		       	         <div class="signupInter">                    <!-- 用户名注册 -->
 		       	         	 <h2 class="signupTheme">欢迎注册飞阁</h2>  
-		       	         	 <form action="" method="">
+		       	         	 <form action="signIn" method="post">
 		       	         	 <div class="signupNamePro">       
 		       	         	      <i class="tipsText">用户名</i>    <!-- 用户名提示文字 -->
-		       	         	 	  <input type="text" class="signupName" placeholder="请输入6-12位字符" onblur="verification1(this.value)">     <!-- 用户名输入 -->
+		       	         	 	  <input name="userName" type="text" class="signupName" placeholder="请输入6-12位字符" onblur="verification1(this.value)">     <!-- 用户名输入 -->
 		       	         	 	  <div class="signupTips1"></div>      <!-- 错误提示语 -->
 		       	         	 </div>
 		       	         	 <div class="signupNamePro">
@@ -101,7 +101,7 @@
 		       	         	 	  <input type="radio" class="Gender" name="man" value="女性">女性
 		       	         	 </div>
 		       	         	 <div class="signupNiuPro">
-		       	         	 <button class="signupNiu" type="submit" onclick="sigupDisBut()">注册</button>
+		       	         	 <button class="signupNiu" id="login" type="submit" onclick="sigupDisBut()">注册</button>
 		       	         	 </div>
 		       	         	 </form>
 		       	         	 <button type="button" onclick="revolve1()" class="bridge1">登陆</button>
@@ -250,6 +250,8 @@
            }
            function sigupDisBut(){
                  $(".signupNiu").attr("disabled", true).attr("type", "button");
+                 document.getElementById("login").submit();
+
            }
 	  </script>
 </body>

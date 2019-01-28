@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文明穿着</title>
+	<link rel="stylesheet" href="../CSS/head_navigation.css">
+	<link rel="stylesheet" href="../CSS/initialization.css">
+	<link rel="stylesheet" href="../CSS/dress.css">
+</head>
+<body>
+	 <!-- 头部导航栏开始 -->
+	<div class="browse_navigation">
+            <div class="navCenter">
+			    <ul>
+					<li class="topNav_homepage list">
+						  <a href="javascript:" class="link homepage">首页</a>
+						  <div class="home_interact line"></div>
+					</li>
+					<li class="topNav_trip list">
+						  <a href="javascript:" class="link trip">出行</a>
+    
+						  <div class="trip_interact line"></div>
+					</li>
+					<li class="topNav_hotel list">
+						  <a href="javascript:" class="link hotel ">旅游团</a>
+						  <div class="hote_interact line"></div>
+					</li>
+					<li class="topNav_group list">
+						  <a href="javascript:" class="link group ">酒店</a>
+						  <div class="grou_interact line"></div>
+					</li>
+					<li class="topNav_country list">
+						  <a href="javascript:" class="link country">国家游</a>
+						  <div class="coun_interact line"></div>
+					</li>
+			    </ul>
+			</div>
+			<div class="navRight">
+            	<ul>
+            		<li class="topNav_signIn right"><a href="HTML/signIn.html" class="link">登陆</a></li>
+            		<li class="right">|</li>
+            		<li class="topNav_signUp right"><a href="HTML/signIn.html" class="link">注册</a></li>
+            	</ul>
+            </div>
+	</div>
+         <!-- 头部导航栏结束 -->
+    <div class="dress">
+    	    <!-- 图片未找到 -->
+    	<img src="../image/hotel_Img/广东酒店1.jpg" alt="汉服服饰" class="dress_Img">
+    	<i class="dress_address">华夏五千年的风霜演变</i>
+    	<i class="dress_country">衣冠上国，锦绣中华</i>
+    	<i class="dress_style">华丽秀美的汉服</i>
+    	<a href="" class="dress_more">了解更多</a>
+    </div>
+         <!-- 衣服构造 -->
+    <div class="dress_introduce">
+    	<img src="../image/hotel_Img/广东酒店1.jpg" alt="汉服构造" class="dressInt_Img">
+    	<i class="dressInt_jacket" id="dressInt_first">衣领</i>
+    	<i class="dressInt_jacket" id="dressInt_next">衣身</i>
+    	<i class="dressInt_jacket" id="dressInt_last">衣袖</i>
+    	<i class="dressInt_pants" id="dressInt_first">裤腰</i>
+    	<i class="dressInt_pants" id="dressInt_next">库片</i>
+    	<i class="dressInt_pants" id="dressInt_last">裤脚</i>
+    </div>
+          <!-- 尊重服饰差异 -->
+    <div class="dress_respect">
+    	<h1 class="dressRes_theme">尊重服饰差异</h1>
+    		<p class="dressResTex_text">
+    			每个国家和民族都有自己独特的生活习惯和风俗文化。如果彼此之间互不了解，或不尊重他人的服饰文化，将会带来许多尴尬，甚至引起矛盾。每个服饰代表的是一个国家的历史和文明，承载着古老的气息，世代相传。所以，尊重差异，理解个性。
+    		</p>
+    </div>
+
+
+           <!-- 宽高自适应 -->
+    <script src="../js/jquery-3.3.1.min.js">
+    </script>
+    <script>
+          
+         $(document).ready(function() {
+         	// 宽高自适应
+         	 var dress = $(".dress:first");
+         	 var body = $("body");
+         	 dress.css({"height": body.outerHeight() - 50 + "px"});
+             
+             // 服饰位置定位
+             var dreImgWid = $(".dress_Img").outerWidth();
+             var dreImgHei = $(".dress_Img").outerHeight();
+             var dreAdd = $(".dress_address");
+             var dreCon = $(".dress_country");
+             var dreSty = $(".dress_style");
+             var dreMor = $(".dress_more");
+             var dreArr = [dreAdd, dreCon, dreSty, dreMor];
+          
+             for(var i = 0; i < 4; i ++) {
+             	dreArr[i].css({
+             		"left": dreImgWid - 90 + "px"
+             	})
+             };
+
+                // 服饰构成部分位置定位
+            var dreImgLeft = $(".dressInt_Img").css("margin-left");
+            var dreImgRig = $(".dressInt_Img").css("margin-right");
+            var dreImgIntHei = $(".dressInt_Img").outerHeight();
+         //    var dreImgTop = $(".dressInt_Img").css("margin-top");
+            var jacket = $(".dressInt_jacket[class='dressInt_jacket']");
+            var pants = $(".dressInt_pants[class='dressInt_pants']");
+            jacket.css({
+            	"left":parseInt(dreImgLeft) - 50 + "px"
+            });
+            pants.css({
+                "right":parseInt(dreImgRig) - 50 + "px"
+           
+            })
+         })
+
+    </script>
+
+        <!-- 下划线 -->
+    <script defer>
+         $(document).ready(function() {
+         	   var short_interact = $('.homepage').width() + "px";
+         	   var long_interact = $('.country').width() + "px";
+         	   // 下滑线长度
+
+         	  // 鼠标移动导航栏出现下划线开始
+         	   $(".homepage").mouseenter(function() {
+
+         	   	         $(".home_interact").css({"width": short_interact,"transition":"width 0.5s"})
+         	   });
+         	  $(".homepage").mouseleave(function() {
+         	  	        $(".home_interact").css({"width":"0","transition":"width 0.5s"})
+         	  });
+         	              // 首页
+              $(".trip").mouseenter(function() {
+
+         	   	         $(".trip_interact").css({"width": short_interact,"transition":"width 0.5s"})
+         	   });
+         	  $(".trip").mouseleave(function() {
+         	  	        $(".trip_interact").css({"width":"0","transition":"width 0.5s"})
+         	  });
+                           // 出行
+
+               $(".hotel").mouseenter(function() {
+
+         	   	         $(".hote_interact").css({"width": long_interact,"transition":"width 0.5s"})
+         	   });
+         	  $(".hotel").mouseleave(function() {
+         	  	        $(".hote_interact").css({"width":"0","transition":"width 0.5s"})
+         	  });
+                         // 旅游团
+               $(".group").mouseenter(function() {
+
+         	   	         $(".grou_interact").css({"width": short_interact,"transition":"width 0.5s"})
+         	   });
+         	  $(".group").mouseleave(function() {
+         	  	        $(".grou_interact").css({"width":"0","transition":"width 0.5s"})
+         	  });
+         	                 // 酒店
+
+         	   $(".country").mouseenter(function() {
+
+         	   	         $(".coun_interact").css({"width": long_interact,"transition":"width 0.5s"})
+         	   });
+         	  $(".country").mouseleave(function() {
+         	  	        $(".coun_interact").css({"width":"0","transition":"width 0.5s"})
+         	  });
+         	               // 国家游
+                 
+                 // 鼠标点击输入框有阴影
+              $(".searchPro").focus(function(){
+              	       $(".searchPro").css({"box-shadow":"0px 0px 10px black"})
+              })
+              $(".searchPro").blur(function() {
+              	       $(".searchPro").css({"box-shadow":"0 0 5px balck"})
+              })
+         }); 
+	</script>
+</body>
+</html>

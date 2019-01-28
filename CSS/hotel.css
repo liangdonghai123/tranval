@@ -1,0 +1,197 @@
+   /*<!-- 左边酒店文字介绍开始 -->*/
+.hotel_dscribe{
+	width:40%;
+	background-color:#00f;
+	position:fixed;
+	top:50px;
+	left: 0;
+    z-index: 20;
+}
+.hotelDsc_theme{
+	width:100%;
+	height:60px;
+	line-height: 60px;
+	font-size:40px;
+	margin-top: 70px;
+	color:#fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.hotelDsc_text{
+	width:350px;
+    letter-spacing: 2px;
+    color:#fff;
+    text-indent: 2em;
+    line-height: 40px;
+    margin:auto;
+}
+.hotelDsc_link{
+	display: inline-block;
+	width:130px;
+	height:40px;
+	color:#fff;
+	text-align: center;
+	line-height:40px;
+	border: 2px solid #fff;
+	border-radius: 40px;
+	margin-top:80px;
+}
+          /*左边酒店文字介绍结束*/
+
+          /*右边地区酒店及浏览开始*/
+/*地区选择开始*/
+.hotelBro_area{
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	position:relative;
+	padding-left:47%;
+	background-color: #f8f8f8;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+.hotelBroAre_area{
+	height:50px;
+    font-size: 19px;
+    font-weight: 550;
+    margin-right:10px;
+}
+.hotelBroAre_province{
+    margin-left: 20px;
+}
+.hotelBroAre_more{
+	margin-left: 25px;
+	font-size: 14px;
+	color:#f40;
+}
+/*地区选择结束*/
+/*酒店浏览开始*/
+.hotel_browse{
+	width:100%;
+	padding:2% 2% 0 42%;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+.hotelBro_show{
+    width:100%;
+    display: -webkit-flex;
+    display:flex;
+    -webkit-flex-wrap:wrap;
+    flex-wrap:wrap;
+}
+.hotelBroSho_best, .hotelBroSho_long, .hotelBroSho_short{
+	height:200px;
+	position:relative;
+	border:2px solid #fff;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+    background-size: 100% 100%;
+}
+.hotelBroSho_best{
+	width:70%;
+}
+.hotelBroSho_long{
+	width:40%;
+	padding-top: 150px;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+.hotelBroSho_short{
+	width:30%;
+	display: -webkit-flex;
+    -webkit-align-items:center;
+}
+.hotelBroShoBes_text{
+	background:rgba(255,0,0,0.3
+		);
+	width:100%;
+	position:absolute;
+    bottom: 0;
+    height:60px;
+    line-height: 25px;
+    font-size: 20px;
+    color:#fff;
+    text-align: left;
+    padding:5px;
+    box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+.hotel_short{
+	width:100%;
+	height:50px;
+	line-height:50px;
+	font-weight: 540;
+	text-align: center;
+	color:#fff;
+	background: rgba(0,0,0,0.3);
+	padding:5px;
+	font-size: 23px;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+    transition:all 0.5s;
+}
+.hotel_short, .hotel_long{
+	display: -webkit-box;
+    -webkit-line-clamp:1;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+}
+.hotel_long, .hotel_money{
+    font-size: 18px;
+    font-weight: 505px;
+
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+}
+.hotel_long{
+	width:70%;
+	padding-left: 5px;
+	float: left;
+}
+.hotel_money{
+	float:right;
+	padding:0 5px;
+}
+/*酒店图片*/
+.GDimg1{
+	background-image: url(../image/hotel_Img/广东酒店1.jpg)
+}
+.GDimg2{
+	background-image: url(../image/hotel_Img/广东酒店1.jpg)
+}
+
+.GDimg4{
+	background-image: url(../image/hotel_Img/广东酒店1.jpg);
+    background-size:100% 150px;
+    background-repeat: no-repeat;
+    background-color: #f8f8f8;
+}
+/*酒店浏览结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,520 @@
+*{
+	padding:0;
+	margin:0;
+	font-size: 16px;
+}
+a{
+	text-decoration: none;
+	color:#000;
+}
+ul{
+	list-style-type: none;
+}
+i{
+	display: inline-block;
+	font-style:normal;
+}
+body,html{
+	width:100%;
+	height:100%;
+}
+    /*页面初始化*/
+.browse{
+	width:100%;
+	min-width:1100px;
+	min-height:500px;
+	position:relative;
+	margin-bottom: 50px;
+}
+     /*轮播图片开始*/
+.browse_Img{
+	width:600px;
+	height:400px;
+	position:absolute;
+	top:120px;
+	left:1px;
+	z-index: 100;
+	box-shadow: 0 0 5px black;
+    border-radius:0 5px 5px 0 ;
+}
+.wusong{
+	width:100%;
+	height:100%;
+	position:absolute;
+	opacity:0;
+	transition:opacity 0.2s;
+	border-radius:0 5px 5px 0;
+}
+.first{
+	z-index:200;
+	opacity: 1
+}
+    /*头部导航栏开始*/
+.browse_navigation{
+	position:relative;
+	width:100%;
+	height:50px;
+	background-color:#00f;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	display:-webkit-flex;
+	display:flex;
+	justify-content:space-around;
+	-webkit-justify-content:space-around;
+}
+.browse_navigation::after{
+	content:"";
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left:0;
+	width:100%;
+    border:0.1px solid #f8f8f8;
+}
+.navCenter{
+	height:100%;
+	margin:auto;
+}
+.list{
+	height:50px;
+	line-height:50px;
+	width:auto;
+	float:left;
+	margin-left:40px;
+    position:relative;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+      /*中间导航*/
+
+.navRight{
+    height:50px;
+    line-height:50px;
+}
+.right{
+	height:100%;
+	float:left;
+    margin-right:10px;
+}
+    /*登陆注册样式*/
+
+    /*头部链接样式开始*/
+ .link{
+ 	color:#fff;
+ 	font-size:20px;
+ }
+    /*头部链接结束*/
+    
+    /*导航栏底部划线开始*/
+.line{
+	position:absolute;
+	bottom:10px;
+	left:0;
+	height:3px;
+	width:0;
+}
+.home_interact{             /*首页下滑线颜色*/
+	background-color:#33f;
+}
+.homepage:hover{           
+    color:#33f;
+}
+.trip_interact{             /*出行下滑线颜色*/
+	background-color:#FF00FF;
+}
+.trip:hover{
+	color:#f0f;
+}
+.hote_interact{            /*旅游团下滑线颜色*/   
+	background-color:#3f0;
+}
+.hotel:hover{
+	color:#3f0;
+}
+.grou_interact{             /*酒店下滑线颜色*/
+	background-color:#0ff;
+}
+.group:hover{
+	color:#0ff;
+}
+.coun_interact{             /*国家游下滑线颜色*/
+	background-color:#f90;
+}
+.country:hover{
+	color:#f90;
+}
+    /*导航栏底部划线结束*/
+
+    /*景区文字介绍开始*/
+.browse_text{
+	width:100%;
+	height:180px;
+	background-color:#00f;
+	padding-left:58%;
+	position:relative;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+.browse_text p{
+   width:450px;
+   height:60px;
+   line-height: 30px;
+   color:#fff;
+   position:absolute;
+   bottom:10px;
+}
+     /*景区文字介绍结束*/
+
+     /*价格，活动，承诺等开始*/
+.browse_introduce{     /*价格区*/
+	width:100%;
+	padding-left:58%;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.monReb, .praNum{
+    float:left;
+}
+.broIntroduce_price{
+	padding:8px 0;
+	width:100%;
+	padding-left: 58%;
+	background-color:#fffcf6;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+.broIntroduce_price::after{
+	content:"";
+	clear:both;
+	display:block;
+}
+.praNum{
+	margin-left:180px;
+}
+.rebate, .praise, .number{
+	font-size: 14px;
+	color:#c6c6c6;
+	display:block;
+}
+.praise{
+	height:40px;
+	line-height:40px;
+}
+.money{
+	font-size:30px;
+	color:#f40;
+	display:block;
+}
+
+.broIntroduce_favourable, .broIntroduce_feature, .broIntroduce_promise{
+    height:23px;
+    line-height:23px;
+    margin-top:25px;
+}
+.favourableThe, .discount, .service, .authentication, .broIntroduce_feature i{
+	display: inline-block;
+	font-size:15px;
+	border-radius:5px;
+	padding:0 5px;
+}
+.favourableThe, .thickening, .discount, .service{
+    font-weight: bold;
+    margin-right:15px;
+}
+.brown{
+	background-color:#f40;
+	color:#fff;	
+	margin-right:5px
+}
+.featrue{
+	background-color: #f8f8f8;
+	color:#5a5a5a;
+	border:1px solid #ddd;
+	margin-right:5px;
+}
+/*领卷活动*/
+.broIntroduce_activity{
+	height:30px;
+	margin-top: 25px;
+}
+.other{
+	color:#f40;
+	font-size:13px;
+    display: inline-block;
+    margin-left: 20px;
+}
+.volume{
+	display: inline-block;
+	height:30px;
+	line-height: 30px;
+	width:80px;
+	color:#f40;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	padding-left: 20px;
+	background-image: url(../image/browse_Img/优惠卷框.jpg);
+	background-size: 100% 100%;
+}
+/*服务承诺*/
+.authentication{
+	border:1px solid #00f;
+	color:#00f;
+	margin-right:5px
+}
+     /*价格，活动，承诺等结束*/
+    
+     /*日期加购买开始*/
+ .purchase{
+ 	padding:20px 20px;
+ 	box-sizing:border-box;
+ 	-webkit-box-sizing:border-box;
+ 	-moz-box-sizing:border-box;
+ 	width:979px;
+ 	height:365px;
+ 	border:2px solid #00f;
+ 	margin:auto;
+ }   
+ /*左边日期开始*/
+ .years{
+ 	width:50%;
+ }
+ .date{
+ 	height:30px;
+ 	line-height: 30px;
+ 	width:100px;
+ 	display: inline-block;
+ 	cursor: pointer;
+ 	font-weight: bold;
+ }
+ .purchase_date{
+ 	width:50%;
+ 	float:left;
+ }
+.tabDate{
+	width:100%;
+	border-top: none;
+	border:1px solid #ccc;
+}
+.tabWeek, .tabDay{
+	height:42px;
+}
+.day, .week{
+    height:40px;
+    width:64px;
+}
+.day{
+
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	position:relative;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+.last{
+	border-right:none;
+}
+.dayTop{
+	font-size: 14px;
+	position:absolute;
+	top:3px;
+	left:3px;
+}
+.dayMoney{
+    position:absolute;
+    color:#f40;
+    bottom:0;
+	width:100%;
+	text-align: center;
+	height:20px;
+	line-height: 20px
+}
+/*左边日期结束*/
+
+/*<!-- 右边加入购买开始 -->*/
+.purchase_buy{
+	width:50%;
+	float:left;
+	padding-left:50px;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+.purBuy_tips{
+	font-size:18px;
+	font-weight: 500;  
+	margin-bottom: 18px;
+}
+.outing_date, .outing_number{
+	float: left;
+	margin-left: 50px;
+
+}
+.adult, .children{
+	float:left;
+	margin-left: 20px;
+}
+.adult_num{
+	height:19px;
+	line-height: 19px;
+	width:20px;
+}
+
+.adult_text{
+	font-size: 14px;
+	height:20px;
+	line-height: 20px;
+	color:#f40;
+	margin-left: 2px;
+}
+.adult button, .children button{
+	width:20px;
+	height:20px;
+	line-height:20px;
+	text-align: center;
+	background-color: #f40;
+	color: #fff;
+	border:none;
+	
+}
+.outing_date, .outing_number, .purBuy_total .total {
+	font-size: 13px;
+	padding-left:15px;
+}
+.purBuy_date, .purBuy_number, .purBuy_total{
+    height:38px;
+    line-height: 38px;
+    margin-bottom:20px;
+}
+.purBuy_total .number{
+	font-size:25px;
+	margin-left:30px;
+	color:#f40;
+	float:left;
+}
+.purBuy_total .total{
+	float:left;
+}
+.purBuy_reserve{
+	width:100%;
+}
+.purLink{
+	width:150px;
+	height:35px;
+	color:#fff;
+	background: #00f;
+	line-height: 35px;
+	text-align: center;
+	font-size: 18px;
+	border:1px solid #00f;
+	border-radius:8px;
+    display: inline-block;
+}
+.join{
+	margin-left:60px;
+}
+.adult, .children{
+    
+}
+
+   /*<!-- 右边加入购买结束 -->*/
+      /*<!-- 产品概要和特色开始 --> */
+.outAnPro{
+	width:100%;
+	height:300px;
+	margin: 15px 0;
+	padding:10px 0;
+	background-color:#f2f2f2;
+	display: flex;
+	justify-content:center;
+}
+.outline, .product{
+	width:35%;
+	height:100%;
+    float: left;
+    background-color:#fff;
+}
+.outline{
+	border-right:5px double #f2f2f2;
+}
+.outline_theme{
+	height:40px;
+	line-height: 40px;
+	padding:0 20px 0 20px;
+	font-size:18px;
+	font-weight: 530;
+	margin-bottom:20px;
+}
+.outline i, .product a{
+	display: block;
+	height:30px;
+	line-height:30px;
+	margin-left: 50px;
+}
+.product a{
+    border:1px solid #00f;
+    border-radius: 50px;
+    width:100px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+        /*<!-- 产品概要和特色结束 --> */
+
+        /*<!-- 图片和文字介绍开始 -->*/
+.imgAnTex{
+	width:100%;
+	background-color:#cec5bf;
+	color:#fff;
+}
+.imgAnTex_pro{
+	width:100%;
+	margin-bottom: 30px;
+    height:460px;
+    overflow: hidden;
+}
+.imgAnTex_text, .imgAnTex_image{
+	float:left;
+}
+.imgAnTex_text{
+	width:40%;
+	padding:60px 0 0 40px;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+.imgAnTex_image{
+	display:inline-block;
+	width:60%;
+    height:100%;
+    position: relative;
+}
+.alike{
+	width:100%;
+	height:900px;
+    position:absolute;
+    bottom:-350px;
+}
+.imgAnTex_text_theme{
+	height:40px;
+	line-height:40px;
+	font-size:25px;
+	font-weight: 550;
+	display: block;
+	width:100%;
+	text-align: center;
+
+}
+.imgAnTex_text_text{
+	width:350px;
+	height:30px;
+	line-height: 30px;
+	letter-spacing:3px;
+	margin:auto;
+    text-indent: 2em;
+}
