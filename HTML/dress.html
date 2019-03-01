@@ -50,17 +50,20 @@
     	<i class="dress_address">华夏五千年的风霜演变</i>
     	<i class="dress_country">衣冠上国，锦绣中华</i>
     	<i class="dress_style">华丽秀美的汉服</i>
-    	<a href="" class="dress_more">了解更多</a>
+    	<a href="" class="dress_more">
+            <i class="go">GO it</i>
+            <i class="geng">了解更多</i>   
+        </a>
     </div>
          <!-- 衣服构造 -->
     <div class="dress_introduce">
     	<img src="../image/hotel_Img/广东酒店1.jpg" alt="汉服构造" class="dressInt_Img">
-    	<i class="dressInt_jacket" id="dressInt_first">衣领</i>
-    	<i class="dressInt_jacket" id="dressInt_next">衣身</i>
-    	<i class="dressInt_jacket" id="dressInt_last">衣袖</i>
-    	<i class="dressInt_pants" id="dressInt_first">裤腰</i>
-    	<i class="dressInt_pants" id="dressInt_next">库片</i>
-    	<i class="dressInt_pants" id="dressInt_last">裤脚</i>
+    	<i class="dressInt_jacket dressint" id="dressInt_first">衣领</i>
+    	<i class="dressInt_jacket dressint" id="dressInt_next">衣身</i>
+    	<i class="dressInt_jacket dressint" id="dressInt_last">衣袖</i>
+    	<i class="dressInt_pants dressint" id="dressInt_first">裤腰</i>
+    	<i class="dressInt_pants dressint" id="dressInt_next">库片</i>
+    	<i class="dressInt_pants dressint" id="dressInt_last">裤脚</i>
     </div>
           <!-- 尊重服饰差异 -->
     <div class="dress_respect">
@@ -71,9 +74,10 @@
     </div>
 
 
-           <!-- 宽高自适应 -->
+           
     <script src="../js/jquery-3.3.1.min.js">
     </script>
+         <!-- 宽高自适应 -->
     <script>
           
          $(document).ready(function() {
@@ -102,8 +106,8 @@
             var dreImgRig = $(".dressInt_Img").css("margin-right");
             var dreImgIntHei = $(".dressInt_Img").outerHeight();
          //    var dreImgTop = $(".dressInt_Img").css("margin-top");
-            var jacket = $(".dressInt_jacket[class='dressInt_jacket']");
-            var pants = $(".dressInt_pants[class='dressInt_pants']");
+            var jacket = $(".dressInt_jacket[class='dressInt_jacket dressint']");
+            var pants = $(".dressInt_pants[class='dressInt_pants dressint']");
             jacket.css({
             	"left":parseInt(dreImgLeft) - 50 + "px"
             });
@@ -112,9 +116,80 @@
            
             })
          })
-
     </script>
+        <!-- 鼠标移动链接变化样式和鼠标移动到服饰部位出现样式变化-->
+    <script type="text/javascript">
+        var dressInt = document.getElementsByClassName("dressint");
 
+        for(var i = 0; i < dressInt.length; i ++){
+
+              if(dressInt[i].addEventListener) {
+                   dressInt[i].addEventListener("mouseenter",function () {
+                       this.style.background = "#00f";
+                       this.style.boxShadow = "0 0 5px black";
+                       },false);
+                    dressInt[i].addEventListener(
+                       "mouseleave",function () {
+                         this.style.background = "#333c4e";
+                         this.style.boxShadow = "0"
+                       },false) 
+              }else if(dressInt[i].attachEvent){
+                      dressInt[i].attachEvent(
+                         "mouseenter",function () {
+                          this.style.background = "#00f";
+                          this.style.boxShadow = "0 0 5px black"
+                         });
+                         dressInt[i].attachEvent(
+                        "mouseleave",function () {
+                            this.style.background = "#333c4e";
+                            this.style.boxShadow = "0"
+                        });
+                       
+              }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        $(document).ready(function() {
+            var dressMor = $(".dress_more");
+            var go = $(".go");
+            var geng = $(".geng");
+            dressMor.bind({
+                mouseenter:function() {
+                    go.css({
+                        "left":"0",
+                        "color":"#f40"
+                    });
+                    dressMor.css({
+                        "border":"2px solid #f40"
+                    })
+                    geng.css({
+                        "left":"100%"
+                    })
+                },
+                mouseleave:function() {
+                    go.css({
+                        "left":"-100%"
+                    });
+                    dressMor.css({
+                        "border":"2px solid #00f"
+                    })
+                    geng.css({
+                        "left":"0"
+                    })
+                }
+            })
+        })
+    </script>
         <!-- 下划线 -->
     <script defer>
          $(document).ready(function() {

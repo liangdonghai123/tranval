@@ -1,0 +1,230 @@
+        /*汽车，飞机，火车*/
+.ticket_box{
+	width:100%;
+	height:70px;
+	font-size:0;
+}
+.ticket_link{
+	width:33.33%;
+	font-size:20px;
+	line-height: 70px;
+	text-align: center;
+    color:#666;
+    position:relative;
+    border-bottom:1px solid #666;
+    
+}
+.ticket_link::after{
+	content:"";
+	display:block;
+	position:absolute;
+	right:0;
+	top: 15px;
+	width:1px;
+	height:40px;
+    background:#666;
+}
+           /*购票须知*/
+.ticketImg_buy{
+	position:absolute;
+	width:600px;
+	top:30px;
+	right:30px;
+	padding:20px;
+	background:rgba(255,255,255,0.4);
+}
+.ticketImg_theme{
+	text-align: center;
+	font-size:30px;
+	color:#00f;
+	line-height: 60px;
+	height:60px;
+}
+.ticketImg_text{
+	line-height:30px;
+	text-indent: 2em;
+	letter-spacing:3px;
+}
+            /*搜索车票表单*/
+.ticket_Img{
+	width:100%;
+	margin-bottom: 50px;
+	padding-top: 30px;
+	background:url(../image/ticket_Img/背景图.jpg);
+	background-size: 100% 100%;
+	position:relative;
+}
+.ticket_frame{
+	width:400px;
+	height:350px;
+	border:2px solid #666;
+	margin-left: 30px;
+	background-color:rgba(255,255,255,0.7);
+}
+.ticketFra_left, .ticketFra_right{
+	float:left;
+	height:100%;
+	width:50px;
+	border-right:1px solid #666;
+
+}
+.ticketLink_one, .ticketLink_two{
+	width:100%;
+	height:50%;
+	display:block;
+    font-size: 20px;
+    text-align: center;
+    line-height: 75px;
+    color:#666;
+    position:relative;
+    padding:0px 15px;
+}
+.ticketLink_one{
+    border-bottom:1px solid #666;
+}
+        /*单程，返程结束*/
+.ticketFra_right{
+	width:346px;
+	height:100%;
+	padding:20px 0 20px 20px;
+	position:relative;
+}
+.ticket_lab{
+	display: block;
+	color:#666;
+	font-size: 15px;
+	line-height: 25px;
+}
+.ticket_input{
+	margin-bottom: 20px;
+	width:260px;
+	padding:5px;
+	height:35px;
+	line-height: 35px;
+	border:1px solid #666;
+	background-color:rgba(255,255,255,0.2);
+}
+.tijiao{
+	position:absolute;
+	right:0;
+	top:0;
+	width:50px;
+	height:346px;
+	background:#00f;
+	color:#fff;
+	border:none;
+}
+      
+         /*热门路线*/
+.churchyard,
+.abroad_short,
+.abroad_long,
+.theme_tourism,
+.self_driving{             /*地区导航栏*/
+	width:100%;
+	padding:20px 0 20px 48px;
+	-webket-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+	
+}
+.churchyard i,
+.abroad_short i,
+.abroad_long i,
+.theme_tourism i,
+.self_driving i{
+	 color:#006cfc;
+	 font-size:25px;
+	 font-weight:bold;
+	 float: left;
+	 margin-right:30px;
+}
+.area{
+	 width:55px;
+	 float: left;
+	 text-align: center;
+     padding-top:10px;
+}
+.churchyard::after{
+	content:"";
+	clear:both;
+	display:block;
+}
+
+        /*热门路线*/
+.ticket_popular{
+	width:1000px;
+	margin:auto;
+	font-size:0;
+	background:#fffdf7;
+}
+.ticketPop_link{
+	width:250px;
+	height:60px;
+	border-right:1px solid #666;
+	border-bottom:1px solid #666;
+	line-height: 60px;
+	font-size:20px;
+	padding:0 5px;
+}
+.ticketPop_money{
+	color:#f40;
+}
+.ticketPop_area1, .ticketPop_area2, .ticketPop_sign{
+	float:left;
+	margin-left:5px;
+	color:18px;
+}
+.ticketPop_money{
+	float:right;
+}
+.ticketBottom{
+	border-bottom:none;
+}
+.ticketRight{
+	border-right:none;
+}
+.ticketBottom1{
+	border-bottom:none;
+	border-right:none;
+}
+
+        /*常见问题*/
+.ticket_problem{
+	width:100%;
+	margin-top: 50px;
+}
+.ticketPro_theme{
+	font-size:25px;
+	color:#666;
+	font-weight:550;
+	margin-bottom:20px;
+	padding-left:48px;
+}
+.ticketPro_other{
+}
+.ticketPro_text{
+	width:200px;
+	height:200px;
+	float:left;	
+	margin-left:50px;
+}
+.ticket_center{
+	width:1000px;
+	margin:auto;
+}
+.ticketPro_other{
+	font-weight:bold;
+	margin-bottom: 6px;
+}
+.ticketPro_text1{
+	letter-spacing: 2px;
+	line-height: 25px;
+	text-indent:2em;
+
+}
+.ticket_center::after{
+    content:"";
+    display:block;
+    clear:both;
+}

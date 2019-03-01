@@ -4,10 +4,55 @@
 	<meta charset="UTF-8">
 	<title>雾凇岛</title>
 	<link rel="stylesheet" href="../CSS/browse_wusong.css">
+
 	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
 </script>
 </head>
-<body>
+<body>   
+	        <!-- 可领优惠卷 -->
+ <div class="canCoupon_bigbox">
+	<div class="canCoupon">
+		<div class="canCoupon_close"></div>
+		<div class="canCoupon_five">
+			<a href="javascript:" class="canCoupon_link">领取</a>
+			<div class="canCoupon_box">
+			     <i class="canCoupon_money">300￥</i>
+			     <p class="canCoupon_introduce">
+				   每满5900元减300元，支持信用卡，花呗，建设;
+			</p>
+			</div>	
+		</div>
+		<div class="canCoupon_five">
+			<a href="javascript:" class="canCoupon_link">领取</a>
+			<div class="canCoupon_box">
+			     <i class="canCoupon_money">500￥</i>
+			     <p class="canCoupon_introduce">
+				   每满6000元减500元，支持信用卡，花呗，农业银行，邮政;
+			</p>
+			</div>
+		</div>
+		<div class="canCoupon_five">
+			<a href="javascript:" class="canCoupon_link">领取</a>
+			<div class="canCoupon_box">
+			     <i class="canCoupon_money">50￥</i>
+			     <p class="canCoupon_introduce">
+				   每单立减50元，仅支持淘宝支付；
+			</p>
+			</div>
+		</div>
+		<div class="canCoupon_five">
+			<a href="javascript:" class="canCoupon_link">领取</a>
+			<div class="canCoupon_box">
+			     <i class="canCoupon_money">1000￥</i>
+			     <p class="canCoupon_introduce">
+				   每满12000元减1000元，支持信用卡，平安，pos机;
+			</p>
+			</div>
+		</div>
+		
+	</div>
+ </div>
+	           
 	<div class="browse">
 		<!-- 轮播图 -->
 		<div class="browse_Img">
@@ -78,6 +123,9 @@
 			<div class="broIntroduce_activity">
 				<i class="discount">领卷活动</i>
 				<a href="javascript:" class="volume">立减卷</a>
+				<div class="broIntroduce_tip">
+					<i class="broIntroduce_money"></i>元优惠卷,<br>满<i class="broIntroduce_corpus"></i>元可用
+				</div>				
 				<a href="javascript:" class="volume">300元</a>
 				<a href="javascript:" class="volume">150元</a>
 				<a href="javascript:" class="other">可领优惠卷 ></a>
@@ -92,7 +140,12 @@
 			<div class="broIntroduce_favourable">
 				<i class="favourableThe">优惠活动</i>
 				<i class="favourable">2019年1.16会员日-跟团游优惠5000元/成人</i>
-				<a href="javascript:" class="other">5个促销 ></a>
+				<a href="javascript:" class="broIntroduce_other">5个促销 >
+                    <p class="otherTip">
+                    	劲爆特惠，指定团期立减500元/成人,名额售完即止
+                       【促销】出境钜惠优惠400元/成人出境预订线路立减350元/成人+赠价值958元中经
+                    </p>
+				</a>
 			</div> 
 		</div>
 	</div>
@@ -305,15 +358,15 @@
 			<div class="purBuy_number">
 				<i class="outing_number">出游人数</i>
 				<div class="adult">
-					<button>-</button>
-					<input class="adult_num" value="1" oninput="value=value.replace(/[^\d]/g,'')">
-					<button type="button" onclick="sum()">+</button>
+					<button class="reduce">-</button>
+					<input class="adult_num" value="1">
+					<button type="button" class="plus">+</button>
 					<i class="adult_text">成人</i>
 				</div>
 				<div class="children">
-					<button>-</button>
+					<button class="reduce">-</button>
 					<input class="adult_num" value="0">
-					<button>+</button>
+					<button class="plus">+</button>
 					<i class="adult_text">儿童</i>
 				</div>
 			</div>
@@ -461,19 +514,45 @@
 	</script>
 	 <!-- 成人和儿童购片人数及金额 -->
 	 <script>
-	     var adultNum = document.getElementsByClassName("adult_num")[0];
-	     var number = document.getElementsByClassName("number")[0];
-	     var i = 1,
-	         sum = 5600;
-         function sum() {
-             i ++;
-             adultNum.innerHTML = i;
-             sum *= i;
-             number.innerHTML = sum;
-         }
+	     $(document).ready(function() {
+	     	  
+	     	  var reduce = $(".reduce");
+	     	  var plus = $(".plus");
+	     	  var number = $(".number");
+	     	  for(var i = 0, h = 2; i < reduce.length; i ++, h--) {
+	     	  	 function as(k, q) {
+                     reduce.eq(k).click(function () {
+	     	  	          if($(this).next().val() >= q) {
+	     	  	  	          $(this).next().val($(this).next().val() *1 - 1 + "");
+	     	  	          };
+                          number.text($(this).next().val() * 5600 + "￥")
+	     	         });
+	     	         plus.eq(k).click(function () {
+	     	  	          
+	     	  	  	          $(this).prev().val($(this).prev().val() * 1 + 1 + "");
+	     	  	              number.text($(this).prev().val() * 5600 + "￥")
+	     	         })
+	     	  	 }
+	     	  	 as(i, h)
+	     	  }
+	     	  
+	     })
+	     $(".adult_num").bind('input', function() {
+     var reg = /^[1-9]\d*$/;
+     if (!reg.test($(this).val())) {
+         $(this).val(1);
+     }
+ })
+
+	     // function clear(value) {
+	     // 	var reg = /^[1-9]\d*$/g;
+      //       value = value.replace(reg, "")
+	     // }
+	     // $(".adult_num").change(clear($(this).val()));
 	 </script>
-	<!-- 轮播图 -->
+	<!-- 轮播图 领卷活动 优惠活动  关闭小图标 五个促销活动-->
 	<script>
+	            // 轮播图
 	      var index = 0;
 	      var wusong = document.getElementsByClassName("wusong");
 	      function clearFirst() {
@@ -498,6 +577,52 @@
           var time = setInterval(function(){
                 goNext();
           }, 3000)
+                 // 领卷活动  
+          var broIntroduceTip = document.getElementsByClassName("broIntroduce_tip")[0];
+          var volume = document.getElementsByClassName("volume");
+          var broIntroduceMoney = document.getElementsByClassName("broIntroduce_money")[0];
+          var broIntroduceCorpus = document.getElementsByClassName("broIntroduce_corpus")[0];
+
+          var tipLife = 150;
+          
+          for(var i = 1; i < volume.length; i ++) {
+          	function remember(k, left) {
+              volume[k].onmouseenter = function() {
+          	  broIntroduceTip.style.left = left + "px";
+          	  broIntroduceTip.style.display = "block";
+          	  broIntroduceMoney.innerHTML = volume[k].innerHTML + "";
+          	  broIntroduceCorpus.innerHTML = Math.floor(Math.random() * 10) * 100 + 5600 + "";
+
+              };
+              volume[k].onmouseleave = function () {
+          	  broIntroduceTip.style.display = "none"
+              };
+              
+              
+            }
+            remember(i, tipLife);
+            tipLife += 80;
+          }
+                  // 点击关闭先图标
+          var canCouponClose = document.getElementsByClassName("canCoupon_close")[0];
+          var canCouponBig = document.getElementsByClassName("canCoupon_bigbox")[0];
+          canCouponClose.onclick = function () {
+                canCouponBig.style.display = "none"
+          }
+                 // 点击可领优惠卷弹出
+          var other = document.getElementsByClassName("other")[0];
+          other.onclick = function () {
+          	   canCouponBig.style.display = "block"
+          }
+               // 五个促销活动
+          var otherTip = document.getElementsByClassName("otherTip")[0];
+          var broOther = document.getElementsByClassName("broIntroduce_other")[0];
+          broOther.onclick = function () {
+          	  otherTip.style.display = "block"
+          }
+          broOther.onmouseout = function () {
+          	  otherTip.style.display = "none"
+          }
 	</script>
 	<!-- 视图移动 -->
 	<script>

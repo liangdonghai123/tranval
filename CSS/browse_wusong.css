@@ -17,6 +17,101 @@ i{
 body,html{
 	width:100%;
 	height:100%;
+
+}
+       /*可领优惠卷*/
+.canCoupon_bigbox{
+   width:100%;
+   height:100%;
+   position:absolute;
+   display: none;
+   z-index:2000;
+   background-color:rgba(255,255,255,0.7);
+}
+.canCoupon{
+	width:80%;
+	height:100%;
+	background:#eee;
+    margin:auto;
+    padding:50px;  
+}
+.canCoupon_five{
+	width:40%;
+	height:150px;
+	border-radius: 10px;
+	float:left;
+	margin-bottom: 50px;
+	margin-right: 50px;
+	background:#fffdf7;
+}
+.canCoupon_link{
+	width:50px;
+	font-size:25px;
+	height:100%;
+	line-height: 70px;
+    background-color:#f40;
+    float:left;
+    border-radius: 10px 0 0 10px;
+    margin-right: 15px;
+    color:#fff;
+    padding:0 10px;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+.canCoupon_box{
+	float:left;
+}
+.canCoupon_money{
+	clear:both;
+	color:#f40;
+	font-size: 28px;
+	font-weight: 550;
+	text-align: center;
+	height:50px;
+	line-height: 50px;
+}
+.canCoupon_introduce{
+	width:300px;
+	letter-spacing: 2px;
+	line-height: 20px;
+	text-indent: 2em;
+
+}
+.canCoupon_close{
+	width:30px;
+	height:30px;
+	position:absolute;
+	right:0;
+	top:0;
+	cursor:pointer;
+	background:url(../image/browse_Img/关闭小图标.jpg);
+	background-size:100% 100%;
+}
+           /*五个促销活动*/
+.otherTip{
+	width:200px;
+	line-height: 20px;
+	letter-spacing: 2px;
+	text-indent: 2em;
+	background: #fffdf7;
+	border-radius: 10px;
+	border:2px solid #666;
+	padding:10px;
+	position:absolute;
+	left:-150px;
+	top:35px;
+	display:none;
+}
+.otherTip::after{
+	content:"";
+	display: block;
+    width:0;
+    height:0;
+    border:10px solid transparent;
+    border-bottom: 10px solid #666;
+    position:absolute;
+    right:28px;
+    top:-21px;
 }
     /*页面初始化*/
 .browse{
@@ -241,12 +336,16 @@ body,html{
 .broIntroduce_activity{
 	height:30px;
 	margin-top: 25px;
+	position:relative;
+	font-size:0;
+	position:relative;
 }
-.other{
+.broIntroduce_other, .other{
 	color:#f40;
 	font-size:13px;
     display: inline-block;
     margin-left: 20px;
+    position:relative;
 }
 .volume{
 	display: inline-block;
@@ -260,6 +359,30 @@ body,html{
 	padding-left: 20px;
 	background-image: url(../image/browse_Img/优惠卷框.jpg);
 	background-size: 100% 100%;
+}
+.broIntroduce_tip{
+    
+    height:50px;
+    line-height:20px;
+    font-size: 14px;
+    border-radius: 10px;
+    background:#eee;
+    padding:5px;
+    position:absolute;
+    top:-70px;
+    display:none;
+}
+.broIntroduce_tip::after{
+	content:"";
+	display:block;
+	width:0;
+	height:0;
+	border:10px solid transparent;
+	border-top:10px solid #eee;
+	position:absolute;
+    left:50%;
+    margin-left:-10px;
+    bottom:-20px;
 }
 /*服务承诺*/
 .authentication{
@@ -374,6 +497,7 @@ body,html{
 	margin-left: 2px;
 }
 .adult button, .children button{
+	cursor:pointer;
 	width:20px;
 	height:20px;
 	line-height:20px;

@@ -1,26 +1,41 @@
-*{
-	padding:0;
-	margin:0;
-	font-size:16px;
+
+    /*左边导航栏开始*/
+.leftAnchor{
+	position:fixed;
+    left:0;
+    top:0;
+    z-index: 1000;
+    display: none;
 }
-i{
-	font-style:normal;
-}
-a{
-	text-decoration: none;
-	color:#000;
-}
-ul{
-    list-style-type: none;
-}
-body,html{
+.anchor_link{
 	width:100%;
 	height:100%;
+	writing-mode:tb-rl;
+	padding:0 10px;
+	text-align: center;
+	font-size:14px;
 }
-    /*元素初始化*/
-
+.anchorLast{
+	background-color: #000;
+	color:#fff;
+}
+.anchorFirst{
+	background-color: #000;
+	color:#fff;
+}
+.anchor_bot{
+	border-bottom: 2px solid black;
+}
+.anchor{
+	width:40px;
+	border-top: 2px solid black;
+	border-left:2px solid black;
+	border-right:2px solid black;
+}
+    /*左边导航栏开始*/
 
 .top_box{
+	display: inline-block;
 	width:100%;
 	height:100%;
     min-width: 900px;
@@ -28,18 +43,20 @@ body,html{
 	position:relative;
 	background-image:url(../image/home_Img/首屏背景图.jpg);
 	background-size:100% 100%;
+
 }
    /*头部框架*/
 
 .topNav{
-	position:relative;
+	position:fixed;
+	top: 0;
+	left:0;
 	width:100%;
 	padding:40px;
-	height:22px;
 	box-sizing:border-box;
-	color:#fff;
 	display: flex;
 	justify-content:space-around;
+	z-index: 10;
 
 }
 .topNav::after{
@@ -71,20 +88,125 @@ body,html{
     line-height: 40px;
 }
 .right{
-	height:25px;
+	height:40px;
 	float:left;
     margin-right:10px;
 }
     /*登陆注册样式*/
+.topNavSin_land:after, .topNav_register:after{
+    content:"";
+    display:block;
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height:3px;
+    transition:all 0.5s;
+    -webkit-transition:all 0.5s;
 
+}
+.topNavSin_land:hover{
+	color:#660;
+}
+.topNav_register:hover{
+    color:#c00;
+}
+.topNavSin_land:hover::after{
+    background:#660;
+    width:100%;
+}
+.topNav_register:hover::after{
+	background:#c00;	
+	width:100%;
+}
     /*头部链接样式开始*/
  .link{
  	color:#fff;
  	font-size:20px;
+ 	position:relative;
  }
     /*头部链接结束*/
-    
+
     /*导航栏底部划线开始*/
+.underEti::after,
+.underDie::after,
+.underDre::after,
+.area_dongbei::after,
+.area_huabei::after,
+.area_huadong::after,
+.area_huanan::after,
+.area_huazhong::after,
+.area_xinan::after,
+.area_xibei::after,
+.area_yingguo::after,
+.area_bili::after,
+.area_deguo::after,
+.area_ruisi::after,
+.area_huazhong::after,
+.area_faguo::after,
+.area_putao::after,
+.area_riben::after,
+.area_taiguo::after,
+.area_yindu::after,
+.area_eluosi::after,
+.area_feilvbin::after,
+.area_hanguo::after,
+.area_yuenan::after,
+.area_qinzi::after,
+.area_miyue::after,
+.area_zhoumo::after,
+.area_haidao::after,
+.area_zhudui::after,
+.area_qinyuan::after,
+.area_beijin::after,
+.area_jiulin::after,
+.area_xiban:after{
+	content:"";
+	display:block;
+	width:0;
+	height:3px;
+	background-color: #00f;
+	position:relative;
+	bottom:2px;
+	left:0;
+	-webkit-transition:all .3s linear;
+	transition:all .3s linear;
+}
+.underEti:hover::after,
+.underDie:hover::after,
+.underDre:hover::after,
+.area_xiban:hover::after,
+.area_dongbei:hover::after,
+.area_huabei:hover::after,
+.area_huadong:hover::after,
+.area_huanan:hover::after,
+.area_huazhong:hover::after,
+.area_xinan:hover::after,
+.area_xibei:hover::after,
+.area_yingguo:hover::after,
+.area_bili:hover::after,
+.area_deguo:hover::after,
+.area_ruisi:hover::after,
+.area_huazhong:hover::after,
+.area_faguo:hover::after,
+.area_putao:hover::after,
+.area_riben:hover::after,
+.area_taiguo:hover::after,
+.area_yindu:hover::after,
+.area_eluosi:hover::after,
+.area_feilvbin:hover::after,
+.area_hanguo:hover::after,
+.area_yuenan:hover::after,
+.area_qinzi:hover::after,
+.area_miyue:hover::after,
+.area_zhoumo:hover::after,
+.area_haidao:hover::after,
+.area_zhudui:hover::after,
+.area_qinyuan:hover::after,
+.area_beijin:hover::after,
+.area_jiulin:hover::after{
+	width:100%;
+}
 .line{
 	position:absolute;
 	bottom:0;
@@ -93,10 +215,10 @@ body,html{
 	width:0;
 }
 .home_interact{             /*首页下滑线颜色*/
-	background-color:#33f;
+	background-color:#906;
 }
 .homepage:hover{           
-    color:#33f;
+    color:#906;
 }
 .trip_interact{             /*出行下滑线颜色*/
 	background-color:#FF00FF;
@@ -105,10 +227,10 @@ body,html{
 	color:#f0f;
 }
 .hote_interact{            /*旅游团下滑线颜色*/   
-	background-color:#3f0;
+	background-color:#cff;
 }
 .hotel:hover{
-	color:#3f0;
+	color:#cff;
 }
 .grou_interact{             /*酒店下滑线颜色*/
 	background-color:#0ff;
@@ -127,16 +249,20 @@ body,html{
     /*文字标题部分开始*/
 .topText{
 	position:relative;
-	margin-top:150px;
+	margin-top:230px;
 }
 .bigText{
+	width:270px;
+	text-align: center;
 	font-size:50px;
 	font-weight:bold;
-	text-align:center;
-	height:120px;
-	line-height:60px;
 	letter-spacing:3px;
 	color:#fff;
+	position:relative;
+	left:50%;
+    margin-left: -135px;
+    transition:left 2s linear, top 2s linear;
+    -webkit-transition:left 2s linear, top 2s linear;
 }
 
    /*文字标题部分结束*/
@@ -211,6 +337,7 @@ body,html{
 	position:relative;
 }
 .civilization{
+	margin-left:-100%;
 	display: block;
 	width:100%;
 	height:200px;
@@ -227,6 +354,7 @@ body,html{
 }
 .careful{
 	float:left;
+	position:relative;
 	width:250px;
 	height:250px;
 }
@@ -236,29 +364,27 @@ body,html{
 	height:250px;
 	position:relative;
 	background-size:100% 100%;
+	-webkit-transition:left 1s linear,right 1s linear,bottom 1s linear, top 1s linear;
 }
 .etiquette{
-	background-image:url(../image/home_Img/孔子文明图.jpg);
+	background-image:url(../image/home_Img/文明出行_礼节.jpg);
 }
 .civili_text{
 	display:block;
-    width:250px;
     position:absolute;
     left: 50%;
     top:50%;
-    margin-left:-80px;
+    margin-left:-40px;
     font-size:25px;
     font-weight:bold;
-    letter-spacing:20px;
     color:#006cfc;
 }
 .diet{
-	width:200px;
-	margin:auto;
-	background-image:url(../image/home_Img/饮食规范.jpg)
+	width:250px;
+	background-image:url(../image/home_Img/文明出行_饮食.jpg)
 }
 .dress{
-	background-image:url(../image/home_Img/文明穿着.jpg)
+	background-image:url(../image/home_Img/文明出行_穿着.jpg)
 }
 
 /*首页提示结束*/
@@ -301,6 +427,11 @@ body,html{
 	clear:both;
 	display:block;
 }
+.self_driving::after{
+	content:"";
+	clear:both;
+	display:block;
+}
 .churchyard i,
 .abroad_short i,
 .abroad_long i,
@@ -313,9 +444,7 @@ body,html{
 	 margin-right:30px;
 }
 .area{
-	 width:55px;
-	 height:23px;
-	 line-height: 23px;
+	 margin-left: 20px;
 	 float: left;
 	 text-align: center;
      padding-top:10px;
@@ -350,6 +479,8 @@ body,html{
 	height:100%;
 	border-radius: 5px 5px 0 0;
 	box-shadow: 0 0 5px black;
+	transition:all 0.2s linear;
+	-webkit-transition:all 0.2s linear;
 }
 .scenery_Img{
 	width:100%;
@@ -553,18 +684,19 @@ body,html{
 .security_text{
 	line-height:35px;
 	letter-spacing:3px;
-	margin-bottom: 80px
+	margin-bottom: 80px;
+	width:563px;
 }
 .security_link{
 	display: block;
-	width:150px;
-	font-size: 16px;
-	height:35px;
-	line-height: 35px;
+	width:170px;
+	font-size: 20px;
+	height:40px;
+	line-height: 40px;
 	text-align: center;
 	color: #fff;
 	background-color:#066cfc;
-	border:1px solid #fff;
+	border:2px solid #fff;
 	border-radius:40px;
 }/*左边文字表述结束*/
  

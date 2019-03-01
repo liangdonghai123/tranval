@@ -69,18 +69,34 @@
              <a href="javascript:" class="GDimg1 hotelBroSho_best">
                  <p class="hotelBroShoBes_text">美酒佳肴迎挚友；名楼雅座待高朋。美味招徕云外客；清香引出月中仙。沽酒客来风亦醉</p>
              </a>
-             <a href="javascript:" class="GDimg2 hotelBroSho_short">
-                 <p class="hotel_short">长隆横琴湾酒店</p>
+             <a href="javascript:" class="GDimg2 hotelBroSho_short shortLin0">
+                 <p class="hotel_short short0">长隆横琴湾酒店
+                 </p>
              </a>
-             <a href="javascript:" class="hotelBroSho_link hotelBroSho_short"></a>
+             <a href="javascript:" class="GDimg3 hotelBroSho_short shortLin1">
+                 <p class="hotel_short short1">珠海粤海酒店
+                 </p>
+             </a>
              <a href="javascript:" class="GDimg4 hotelBroSho_long">
                  <i class="hotel_long">马戏酒店(珠海长隆景区中心店)</i>
                  <i class="hotel_money">520￥</i>
              </a>
-             <a href="javascript:" class="hotelBroSho_link hotelBroSho_short"></a>   
-             <a href="javascript:" class="hotelBroSho_long"></a>
-             <a href="javascript:" class="hotelBroSho_short"></a>
-             <a href="javascript:" class="hotelBroSho_short"></a>
+             <a href="javascript:" class="GDimg5 hotelBroSho_short shortLin2">
+                 <p class="hotel_short short2">珠海来魅力酒店
+                 </p>
+             </a>   
+             <a href="javascript:" class="GDimg6 hotelBroSho_long">
+                 <i class="hotel_long">广州华发·会展行政公寓</i>
+                 <i class="hotel_money">470￥</i>
+             </a>
+             <a href="javascript:" class="GDimg7 hotelBroSho_short shortLin3">
+                 <p class="hotel_short short3">东莞万悦酒店
+                 </p>
+             </a>
+             <a href="javascript:" class="GDimg8 hotelBroSho_short shortLin4">
+                 <p class="hotel_short short4">茂名中邦酒店
+                 </p>
+             </a>
         </div>
     </div>
          <!-- 右边地区酒店及浏览开始 -->
@@ -160,21 +176,31 @@
  
                  <!-- 价格滑动 -->
     <script>
-          $(document).ready(function() {
-               var hotelShort = $(".hotel_short");
-               var GDimg2 = $(".GDimg2");
-               GDimg2.mouseenter(function(){
-                    hotelShort.css({
-                        "color":"#f40"
-                    })
-                    hotelShort.text("320￥")
-               })
-               GDimg2.mouseleave(function() {
-                   hotelShort.css({
-                       "color":"#fff"
-                   })
-                   hotelShort.text("长隆横琴湾酒店")
-               })
+          var hotelBroSho_short = document.getElementsByClassName("hotelBroSho_short");
+          var shortArr = [];
+          $(document).ready(function() {  
+               var hotelBro_show = $(".hotelBro_show");
+               for(var i = 0; i < hotelBroSho_short.length; i ++) {
+                      shortArr.push($(".short" + i).text());
+                      var hotelfn = function (index) {
+                           hotelBro_show.children(".shortLin" + i).bind({
+                               mouseenter:function(){
+
+                                  $(this).children().css({
+                                     "color":"#f40"
+                                  });
+                                  $(this).children().text(300 + Math.floor(Math.random() * 100) + "￥")
+                               },
+                               mouseleave:function(){
+                                   $(this).children().css({
+                                     "color":"#fff"
+                                   });
+                                   $(this).children().text(shortArr[index])
+                               }
+                           })
+                      }
+                      hotelfn(i);
+               }
           })
     </script>
 

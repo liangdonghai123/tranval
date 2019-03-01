@@ -1,4 +1,7 @@
    /*<!-- 左边酒店文字介绍开始 -->*/
+ body{
+ 	height:auto;
+ }
 .hotel_dscribe{
 	width:40%;
 	background-color:#00f;
@@ -84,7 +87,7 @@
 .hotelBroSho_best, .hotelBroSho_long, .hotelBroSho_short{
 	height:200px;
 	position:relative;
-	border:2px solid #fff;
+	border:3px solid #fff;
 	box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
@@ -136,6 +139,7 @@
 	-moz-box-sizing:border-box;
     transition:all 0.5s;
 }
+
 .hotel_short, .hotel_long{
 	display: -webkit-box;
     -webkit-line-clamp:1;
@@ -159,19 +163,35 @@
 	float:right;
 	padding:0 5px;
 }
+.GDimg4,.GDimg6{
+    background-size:100% 150px;
+    background-repeat: no-repeat;
+    background-color: #f8f8f8;
+}
 /*酒店图片*/
 .GDimg1{
 	background-image: url(../image/hotel_Img/广东酒店1.jpg)
 }
 .GDimg2{
-	background-image: url(../image/hotel_Img/广东酒店1.jpg)
+	background-image: url(../image/hotel_Img/长隆横琴.jpg)
 }
-
+.GDimg3{
+	background-image: url(../image/hotel_Img/珠海粤海酒店.jpg)
+}
 .GDimg4{
-	background-image: url(../image/hotel_Img/广东酒店1.jpg);
-    background-size:100% 150px;
-    background-repeat: no-repeat;
-    background-color: #f8f8f8;
+	background-image: url(../image/hotel_Img/马戏酒店.jpg);
+}
+.GDimg5{
+	background-image: url(../image/hotel_Img/珠海魅力酒店.jpg);
+}
+.GDimg6{
+	background-image: url(../image/hotel_Img/珠海华发酒店.jpg);
+}
+.GDimg7{
+	background-image: url(../image/hotel_Img/东莞万悦酒店.jpg);
+}
+.GDimg8{
+	background-image: url(../image/hotel_Img/茂名中邦酒店.jpg);
 }
 /*酒店浏览结束*/
 

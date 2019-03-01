@@ -1,0 +1,72 @@
+.safety{
+	width:80%;
+	margin:auto;
+}
+.safety_box{
+	width:100%;
+	height:100%;
+}
+.fraudLink{
+	width:100%;
+	height:100%;
+	position:relative;
+}
+.accident{
+	width:25%;
+	height:300px;
+	float:left;
+	overflow: hidden;
+}
+.name{
+	width:100%;
+	text-align: center;
+	color:#fff;
+	font-size:30px;
+	font-weight: 550;
+}
+.safety_cover{
+   position:absolute;
+   width:100%;
+   height:100%;
+   background-color: rgba(0,0,0,0.5);
+   display:-webkit-flex;
+   display:flex;
+   align-items:center;
+   -webkit-align-items:center;
+   transition:all .5s linear;
+   -webkit-transition:all .5s linear;
+   -ms-transition:all .5s linear;
+}
+      /*图片*/
+.fraud_link{
+	background:url(../image/safety_Img/诈骗.jpg);
+	background-size: 100% 100%;
+}
+.traffic_link{
+	background:url(../image/safety_Img/交通.jpeg);
+	background-size: 100% 100%;
+}
+.fire_link{
+	background:url(../image/safety_Img/火灾.jpg);
+	background-size: 100% 100%;
+}
+.robbery_link{
+	background:url(../image/safety_Img/抢劫.jpg);
+	background-size: 100% 100%;
+}
+.ripoff_link{
+	background:url(../image/safety_Img/宰客.jpg);
+	background-size: 100% 100%;
+}
+.drowning_link{
+	background:url(../image/safety_Img/溺水.jpg);
+	background-size: 100% 100%;
+}
+.climbing_link{
+	background:url(../image/safety_Img/攀岩.jpg);
+	background-size: 100% 100%;
+}
+.other_link{
+	background:url(../image/safety_Img/其他.jpg);
+	background-size: 100% 100%;
+}

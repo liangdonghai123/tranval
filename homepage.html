@@ -4,10 +4,23 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="CSS/homepage.css">
+  <link rel="stylesheet" href="CSS/initialization.css">
 </head>
 <body>
+        <!-- 左边导航栏 -->
+   <ul class="leftAnchor">
+     <li class="anchor"><a href="#top_box" class="anchor_link">首页</a></li>
+     <li class="anchor"><a href="#homepage_tips" class="anchor_link">文明出行</a></li>
+     <li class="anchor"><a href="#anchorOne" class="anchor_link">境内旅游</a></li>
+     <li class="anchor"><a href="#anchorTwo" class="anchor_link">境外短线</a></li>
+     <li class="anchor"><a href="#anchorThree" class="anchor_link">境外长线</a></li>
+     <li class="anchor"><a href="#anchorFour" class="anchor_link">主题旅游</a></li>
+     <li class="anchor"><a href="#anchorFive" class="anchor_link">自驾游</a></li>
+     <li class="anchor"><a href="#security" class="anchor_link">旅游安全</a></li>
+     <li class="anchor"><a href="#strategy" class="anchor_link anchor_bot">旅游攻略</a></li>
+   </ul>
    <!-- 第一屏 -->
-	<div class="top_box">
+	<div class="top_box" id="top_box">
 		<div class="topNav">
             <div class="navCenter">
                 <!-- 中间导航栏开始 -->
@@ -17,7 +30,7 @@
 						  <div class="home_interact line"></div>
 					</li>
 					<li class="topNav_trip list">
-						  <a href="javascript:" class="link trip">出行</a>
+						  <a href="HTML/ticket.html" class="link trip">出行</a>
     
 						  <div class="trip_interact line"></div>
 					</li>
@@ -26,11 +39,11 @@
 						  <div class="hote_interact line"></div>
 					</li>
 					<li class="topNav_group list">
-						  <a href="javascript:" class="link group ">酒店</a>
+						  <a href="HTML/hotel.html" class="link group ">酒店</a>
 						  <div class="grou_interact line"></div>
 					</li>
 					<li class="topNav_country list">
-						  <a href="javascript:" class="link country">国家游</a>
+						  <a href="HTML/nationalTour.html" class="link country">国家游</a>
 						  <div class="coun_interact line"></div>
 					</li>
 			    </ul>
@@ -39,9 +52,9 @@
 			<!-- 登陆注册开始 -->
 			<div class="navRight">
             	<ul>
-            		<li class="topNav_signIn right"><a href="HTML/signIn.html" class="link">登陆</a></li>
+            		<li class="topNav_signIn right"><a href="HTML/signIn.html" class="link topNavSin_land">登陆</a></li>
             		<li class="right">|</li>
-            		<li class="topNav_signUp right"><a href="HTML/signIn.html" class="link">注册</a></li>
+            		<li class="topNav_signUp right"><a href="HTML/signIn.html" class="link topNav_register">注册</a></li>
             	</ul>
       </div>
             <!-- 登陆注册结束 -->
@@ -50,10 +63,10 @@
 
              <!-- 主页主题文字开始 -->   
 		<div class="topText">
-			<h1 class="bigText">
+			<i class="bigText">
 				我还年轻<br> 
 				我渴望上路
-			</h1>
+			</i>
 		</div>
               <!-- 主页主题文字结束 --> 
 
@@ -78,37 +91,40 @@
             <!-- 下一页辅助按钮结束 -->
 	</div>
   <!-- 文明出行 -->
-  <div class="homepage_tips">
+  <div class="homepage_tips" id="homepage_tips">
      <i class="civilization">文明出行</i>
      <ul class="civilization_box">
        <li class="careful">
-            <a href="javascript:" class="etiquette civili"><i class="civili_text">文明礼节</i></a>
+            <a href="HTML/etiquette.html" class="etiquette civili"></a>
+            <a href="HTML/etiquette.html" class="civili_text underEti">文明礼节</a>
        </li>
        <li class="careful">
-            <a href="javascript:" class="diet civili"><i class="civili_text">饮食规范</i></a>
+            <a href="HTML/diet.html" class="diet civili"></a>
+            <a href="HTML/diet.html" class="civili_text underDie">饮食规范</a>
        </li>
        <li class="careful">
-            <a href="javascript:" class="dress civili"><i class="civili_text">文明穿着</i></a>
+            <a href="HTML/dress.html" class="dress civili"></a>
+            <a href="HTML/dress.html" class="civili_text underDre">文明穿着</a>
        </li>
      </ul>   
   </div>
    <!-- 旅游景区-->
   <div class="scenic_spot">
            <!-- 境内旅游 -->
-     <div class="churchyard">
+     <div class="churchyard" id="anchorOne">
        <i>境内旅游</i>
-       <a href="javascript:" class="area">东北</a>
-       <a href="javascript:" class="area">华北</a>
-       <a href="javascript:" class="area">华东</a>
-       <a href="javascript:" class="area">华南</a>
-       <a href="javascript:" class="area">华中</a>
-       <a href="javascript:" class="area">西南</a>
-       <a href="javascript:" class="area ">西北</a>
+       <a href="javascript:" class="area area_dongbei">东北</a>
+       <a href="javascript:" class="area area_huabei">华北</a>
+       <a href="javascript:" class="area area_huadong">华东</a>
+       <a href="javascript:" class="area area_huanan">华南</a>
+       <a href="javascript:" class="area area_huazhong">华中</a>
+       <a href="javascript:" class="area area_xinan">西南</a>
+       <a href="javascript:" class="area area_xibei">西北</a>
      </div>
      <div class="churchyard_scen">
         <ul>
           <li class="churchyard_one scenery">
-              <a href="javascript:" class="local">
+              <a href="HTML/browse_wusong.html" class="local claa">
                   <div class="scenery_Img wusong">
                       <i class="introduce">[春节] <雾凇岛>飞阁自营，全程四星，纯玩0购物，广州直飞</i>
                   </div>
@@ -203,15 +219,15 @@
      </div> 
           
               <!-- <i>境外短线</i> -->
-     <div class="abroad_short">
+     <div class="abroad_short" id="anchorTwo">
          <i>境外短线</i>
-         <a href="javascript:" class="area">日本</a>
-         <a href="javascript:" class="area">泰国</a>
-         <a href="javascript:" class="area">印度</a>
-         <a href="javascript:" class="area">俄罗斯</a>
-         <a href="javascript:" class="area">菲律宾</a>
-         <a href="javascript:" class="area">韩国</a>
-         <a href="javascript:" class="area ">越南</a>
+         <a href="javascript:" class="area area_riben">日本</a>
+         <a href="javascript:" class="area area_taiguo">泰国</a>
+         <a href="javascript:" class="area area_yindu">印度</a>
+         <a href="javascript:" class="area area_eluosi">俄罗斯</a>
+         <a href="javascript:" class="area area_feilvbin">菲律宾</a>
+         <a href="javascript:" class="area area_hanguo">韩国</a>
+         <a href="javascript:" class="area area_yuenan">越南</a>
      </div>
      <div class="abroad_scen">
         <ul>
@@ -311,15 +327,15 @@
      </div>
      
              <!-- 境外长线 -->
-     <div class="abroad_long">
+     <div class="abroad_long" id="anchorThree">
          <i>境外长线</i>
-         <a href="javascript:" class="area">英国</a>
-         <a href="javascript:" class="area">比利时</a>
-         <a href="javascript:" class="area">西班牙</a>
-         <a href="javascript:" class="area">德国</a>
-         <a href="javascript:" class="area">瑞士</a>
-         <a href="javascript:" class="area">法国</a>
-         <a href="javascript:" class="area ">葡萄牙</a>
+         <a href="javascript:" class="area area_yingguo">英国</a>
+         <a href="javascript:" class="area area_bili">比利时</a>
+         <a href="javascript:" class="area area_xiban">西班牙</a>
+         <a href="javascript:" class="area area_deguo">德国</a>
+         <a href="javascript:" class="area area_ruisi">瑞士</a>
+         <a href="javascript:" class="area area_faguo">法国</a>
+         <a href="javascript:" class="area area_putao">葡萄牙</a>
      </div>
      <div class="abroad_scen">
         <ul>
@@ -419,12 +435,12 @@
      </div>
 
               <!-- 主题旅游 -->
-     <div class="theme_tourism">
+     <div class="theme_tourism" id="anchorFour">
          <i>主题旅游</i>
-         <a href="javascript:" class="area">亲子</a>
-         <a href="javascript:" class="area">蜜月</a>
-         <a href="javascript:" class="area">周末游</a>
-         <a href="javascript:" class="area">海岛</a>
+         <a href="javascript:" class="area area_qinzi">亲子</a>
+         <a href="javascript:" class="area area_miyue">蜜月</a>
+         <a href="javascript:" class="area area_zhoumo">周末游</a>
+         <a href="javascript:" class="area area_haidao">海岛</a>
      </div>
      <div class="theme_scen">
         <ul>
@@ -524,12 +540,12 @@
      </div>
  
                <!-- 自驾游 -->
-     <div class="self_driving">
+     <div class="self_driving" id="anchorFive">
          <i>自驾游</i>
-          <a href="javascript:" class="area">组队游</a>
-         <a href="javascript:" class="area">清远</a>
-         <a href="javascript:" class="area">北京路</a>
-         <a href="javascript:" class="area">桂林</a>
+          <a href="javascript:" class="area area_zhudui">组队游</a>
+         <a href="javascript:" class="area area_qinyuan">清远</a>
+         <a href="javascript:" class="area area_beijin">北京路</a>
+         <a href="javascript:" class="area area_jiulin">桂林</a>
      </div>
      <div class="self_scen">
         <ul>
@@ -629,7 +645,7 @@
      </div>
   </div>
           <!-- 旅游安全提示开始 -->
-  <div class="security">
+  <div class="security" id="security">
        <div class="security_left">
             <h1 class="security_theme">      旅游安全提示
             </h1>
@@ -639,21 +655,21 @@
             <p class="security_text">
                  在旅游活动中，安全处于首要地位，旅游经营者和从业人员都必须自始自终把安全工作放在首位，丝毫不得懈怠。对于旅游活动中可能发生的安全事故，一定要把防范工作做在先，“预防为主”方针必须贯穿旅游活动的始终、旅游接待的，方方面面。
             </p>
-            <a href="javascript:" class="security_link">各地安全案例</a>
+            <a href="HTML/safety.html" class="security_link">各地安全案例</a>
        </div>
        <div class="security_right">
-            <a href="javascript:" class="security_Img">事故安全图片</a>
+            <a href="HTML/safety.html" class="security_Img">事故安全图片</a>
        </div>
   </div>
           <!-- 旅游安全提示开始 -->
 
           <!-- 旅游攻略开始 -->
-  <div class="strategy">
+  <div class="strategy" id="strategy">
     <h1 class="strategy_theme">旅游攻略</h1>
     <div class="strategy_comment">
          <ul>
            <li class="strategy_list">
-              <a href="javascript:" class="strategy_link">  
+              <a href="HTML/strategy.html" class="strategy_link">  
                 <div class="strategy_Img strategy_haerbin">   
                 </div>
                 <div class="strategy_text">
@@ -706,6 +722,7 @@
   </div>
 	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
 </script>
+         <!-- 菜单栏下划线效果 -->
 	<script type="text/javascript">
 	     
          $(document).ready(function() {
@@ -719,7 +736,8 @@
          	   	         $(".home_interact").css({"width": short_interact,"transition":"width 0.5s"})
          	   });
          	  $(".homepage").mouseleave(function() {
-         	  	        $(".home_interact").css({"width":"0","transition":"width 0.5s"})
+         	  	        $(".home_interact").css({"width":"0",
+                        "transition":"width 0.5s"})
          	  });
          	              // 首页
               $(".trip").mouseenter(function() {
@@ -756,7 +774,9 @@
          	  	        $(".coun_interact").css({"width":"0","transition":"width 0.5s"})
          	  });
          	               // 国家游
-                 
+            $(".country").mouseleave(function() {
+                      $(".coun_interact").css({"width":"0","transition":"width 0.5s"})
+            });    
                  // 鼠标点击输入框有阴影
               $(".searchPro").focus(function(){
               	       $(".searchPro").css({"box-shadow":"0px 0px 10px black"})
@@ -765,13 +785,17 @@
               	       $(".searchPro").css({"box-shadow":"0 0 5px balck"})
               })
          }); 
-	</script>   <!-- 菜单栏下划线效果 -->
-	<script type="text/javascript">
-         var index1 = 0;
+	</script>   
+          <!-- 下一页辅助按钮 各个元素抖动-->
+	<script type="text/javascript"> 
+         var index1 = 0;  // 辅助按钮需要得元素
          var index2 = 20;
          var index3 = 40;
+            // 各个元素抖动所需得元素
+         var bigText = document.getElementsByClassName("bigText")[0];
          var time = setInterval(function(){
-         	   index1 += 10;
+         	       // 下一页辅助按钮
+               index1 += 10;
                index2 += 10;
                index3 += 10;
                $(".lower1").css({"top":index1 + "px"})
@@ -782,8 +806,273 @@
                	   index2 = 20;
                	   index1 = 0;
                }
+                     // 各个元素抖动
+               // 我还年轻
+               bigText.style.left = 50 + Math.random().toFixed() * 1 + "%";
+               bigText.style.top = Math.floor(Math.random() * 10) + "px";
+               $(".etiquette").css({
+                   "left":Math.floor(Math.random() * 10) + "px",
+                   "top":Math.floor(Math.random() * 10) + "px"
+               })
+               $(".diet").css({
+                  "right":Math.floor(Math.random() * 8) + "px",
+                  "bottom":Math.floor(Math.random() * 8) + "px"
+               })
+               $(".dress").css({
+                   "left":Math.floor(Math.random() * 9) + "px",
+                  "bottom":Math.floor(Math.random() * 9) + "px"
+               })
          },700) 
-	</script><!-- 下一页辅助按钮 -->
+	</script>
 
+       <!-- 鼠标移动景区，放大宽高，加阴影 -->
+  <script type="text/javascript">
+       var local = document.getElementsByClassName("local");
+       var strategy = document.getElementsByClassName("strategy_link");   //评论元素获取
+       var security = document.getElementsByClassName("security_Img");      //旅游安全图片
+       function addEvent() {
+           this.style.transform = "scale(1.1, 1.1)";
+           this.style.boxShadow = "0 0 15px black"
+       };      
+       function clearEvent() {
+           this.style.transform = "scale(1, 1)";
+           this.style.boxShadow = "0 0 5px black"
+       };
+       for(var i = 0; i < strategy.length; i ++) {
+           if(strategy[i].addEventListener) {
+                  strategy[i].addEventListener("mouseenter",addEvent,false);
+                  strategy[i].addEventListener("mouseleave",clearEvent,false)
+           }else if(strategy.attachEvent) {
+                  strategy[i].attachEvent("mouseenter",addEvent);
+                  strategy[i].attachEvent("mouseleave",clearEvent)
+           }
+       }
+                // 各个景区
+       for(var i = 0; i < local.length; i ++) {
+           if(local[i].addEventListener) {
+                 local[i].addEventListener(
+                     "mouseenter",addEvent, false);
+                 local[i].addEventListener(
+                     "mouseleave",clearEvent,false)
+            }else if(local[i].attachEven) {
+                 local[i].attachEvent("mouseenter",addEvent);
+                 local[i].attachEvent("mouseleave",clearEvent)
+            }
+       }
+  </script>
+            <!-- 左边导航栏 旅游安全效果-->
+   <script type="text/javascript">
+              // 左边导航栏
+       var anchorLink = document.getElementsByClassName("anchor_link");
+       function clearFirst () {
+           for(var i = 0; i < anchorLink.length; i ++) {
+               anchorLink[i].className = "anchor_link"
+           }
+       }
+       for(var i = 0; i < anchorLink.length; i ++) {            
+                 anchorLink[i].onmouseover = function () {
+                     if(this.className != "anchor_link anchorFirst") {
+                     this.classList.add("anchorLast")
+                     }
+                 };
+                 anchorLink[i].onmouseout = function () {
+                    if(this.className != "anchor_link anchorFirst") {
+                     this.classList.remove("anchorLast")
+                    }   
+                 }
+       }
+                // 旅游安全效果
+       var securityImg = document.getElementsByClassName("security_Img")[0];
+       var securityLink = document.getElementsByClassName("security_link")[0];
+       function change() {
+           this.style.transform = "scale(1.1,1.1)";
+           this.style.boxShadow = "0 0 15px black"
+       }
+       function clearChange() {
+           this.style.transform = "scale(1,1)";
+           this.style.boxShadow = "0 0 5px black"
+       }
+       function linkChange() {
+           this.style.border = "2px solid ##006cfc";
+           this.style.background = "#fff";
+           this.style.color = "#006cfc"
+       }
+       function linkClear() {
+           this.style.border = "2px solid #fff";
+           this.style.background = "#006cfc";
+           this.style.color = "#fff"
+       }
+       securityImg.onmouseover = change;
+       securityImg.onmouseout = clearChange;
+       securityLink.onmouseover = linkChange;
+       securityLink.onmouseout = linkClear;
+   </script>
+       <!-- 鼠标滑轮滑动区块出现 -->
+   <script type="text/javascript">
+
+        $(document).ready(function() {
+             var civilization = $(".civilization");
+             var churchyard = $(".churchyard");
+             var abroad_short = $(".abroad_short");
+             var abroad_long =$(".abroad_long");
+             var theme_tourism = $(".theme_tourism");
+             var self_driving = $(".self_driving");
+             var security_Img = $(".security_Img");
+             var security_theme = $(".security_theme");
+             var security_subtitle = $(".security_subtitle");
+             var security_text = $(".security_text");
+             var security_link = $(".security_link");
+             var security_Img = $(".security_Img");
+             var strategy_theme = $(".strategy_theme");
+            var ending = $(".ending");
+            var local = document.getElementsByClassName("local");
+            var strategy_link = document.getElementsByClassName("strategy_link");
+                 // 获取定位元素位置
+            var anchorJS = document.getElementsByClassName("anchor_link");
+            var anchorLink = $(".anchor_link");
+                  // 左边导航栏的高
+            var windowHeight = window.innerHeight;
+            var anchor = $(".anchor");
+                // 鼠标滑过首屏出现左边导航栏
+            var leftAnchor = $(".leftAnchor");
+            var windowWidth = window.innerWidth;
+                 // 选取不同的类名入数组
+            var homepageArr = [
+              civilization,
+              churchyard,
+              abroad_short,
+              abroad_long,
+              theme_tourism,
+              self_driving,
+              security_theme,
+              security_subtitle,
+              security_text,
+              security_link,
+              security_Img,
+              strategy_theme
+              ];
+                 // 设置左边导航栏的高
+              anchor.css("height",windowHeight / 9 + "px");
+                      // 把所有元素都设置出框
+              for(var i = 0; i < homepageArr.length; i ++) {
+                  homepageArr[i].css({"margin-left":"-" + windowWidth + "px"})
+              };
+
+                   
+                     // 把所有的元素设置入框
+            var topNav = $(".topNav");
+            var chan = 0;
+            var homeLink = $(".link");
+             $(window).scroll(function() {
+                  var position = window.pageYOffset; 
+                      // 非首页时导航栏出现
+
+                  if(position > 150 && position < chan) {
+                       topNav.slideDown("fast",function () {
+                           topNav.css({
+                            "padding":"10px",
+                            "background-color":"#fff"
+                            
+                          })
+                           homeLink.css({
+                             "color":"#000"
+                           })
+                       })
+                  }else if(position > chan) {
+                       topNav.slideUp("fast")
+                  }else if(position < 150){
+                       topNav.slideDown("fast",function() {
+                           topNav.css({
+                              "padding":"40px",
+                              "background-color":"rgba(255,255,255,0)"
+                           });
+                           homeLink.css({
+                              "color":"#fff"
+                           })
+                       })
+                  }
+                  chan = position;
+                  if(position > 134) {
+                        civilization.animate({"marginLeft":"0"},"slow")    
+                  }
+                  if(position > 432 && position < 693) {
+                             anchorJS[1].classList.add("anchorFirst")
+                        }else{
+                             anchorJS[1].classList.remove("anchorFirst")
+                        }
+                  if(position > 600) {
+                        churchyard.animate({"marginLeft":"0"},"slow")
+                        
+                  }
+                  if(position > 693 && position < 1309) {
+                             anchorJS[2].classList.add("anchorFirst")
+                        }else{
+                             anchorJS[2].classList.remove("anchorFirst")
+                  }
+                  if(position > 1150) {
+                        abroad_short.animate({"marginLeft":"0"},"slow")
+                       
+                  }
+                   if(position > 1309 && position < 1921) {
+                             anchorJS[3].classList.add("anchorFirst")
+                        }else{
+                             anchorJS[3].classList.remove("anchorFirst")
+                        }
+                  if(position > 1750) {
+                        abroad_long.animate({"marginLeft":"0"},"slow")
+                        
+                  }
+                  if(position > 1921 && position < 2532) {
+                             anchorJS[4].classList.add("anchorFirst")
+                        }else{
+                             anchorJS[4].classList.remove("anchorFirst")
+                        }
+                  if(position > 2400) {
+                        theme_tourism.animate({"marginLeft":"0"},"slow")
+                        
+                  }
+                  if(position > 2532 && position < 3144) {
+                             anchorJS[5].classList.add("anchorFirst")
+                        }else{
+                             anchorJS[5].classList.remove("anchorFirst")
+                        }
+                  if(position > 3010) {
+                        self_driving.animate({"marginLeft":"0"},"slow")
+                        
+                  }
+                  if(position > 3144 && position < 3650) {
+                             anchorJS[6].classList.add("anchorFirst")
+                        }else{
+                             anchorJS[6].classList.remove("anchorFirst")
+                        }
+                  if(position > 3835) {
+                        security_theme.animate({"marginLeft":"0"},"slow")
+                  }
+                  if(position > 3890) {
+                        security_subtitle.animate({"marginLeft":"0"},"slow")
+                  }
+                  if(position > 3920) {
+                        security_text.animate({"marginLeft":"0"},"slow")
+                  }
+                  if(position > 4000) {
+                        security_link.animate({"marginLeft":"0"},"slow")
+                  }
+                  if(position > 4000) {
+                        security_Img.animate({"marginLeft":"100px"},"slow")
+                  };
+                  if(position > 4229) {
+                        strategy_theme.animate({"marginLeft":"0"},"slow")
+                  };
+                      // 左边导航栏滑动出现
+                  if(position > 523 && position < 3650) {
+                     leftAnchor.slideDown('slow');
+                  }else{
+                    leftAnchor.slideUp("slow")
+                  };
+                  
+             });
+             
+        })
+   </script>
 </body>
 </html>	

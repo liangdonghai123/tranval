@@ -1,0 +1,56 @@
+.etiquette_pro{
+	width:100%;
+	height:600%;
+	background:#e0eded;
+}
+.etiquette_box{
+	width:100%;
+	height:17%;
+}
+.etiquette_introduce, .etiquette_Img{
+	width:50%;
+	height:100%;
+	padding:50px;
+	float:left;
+}
+.etiquette_Img{
+	display:-webkit-flex;
+	display:flex;
+}
+.etiquette_Img:after{
+	content:"";
+	display: block;
+	clear:both;
+}
+.etiquette_theme{
+	font-size: 25px;
+	font-weight: 550;
+	margin-top: 80px;
+	margin-bottom:30px;
+}
+.etiquette_text1, .etiquette_text2{
+	line-height: 23px;
+	letter-spacing: 2px;
+	text-indent: 2em;
+	margin-bottom: 30px;
+}
+
+
+
+
+.etiquette_style{
+	width:500px;
+	height:400px;
+	margin:auto;
+}
+
+
+
+
+
+
+
+
+
+
+

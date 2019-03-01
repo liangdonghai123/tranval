@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../CSS/head_navigation.css">
+	<link rel="stylesheet" href="../CSS/strategy.css">
+	<link rel="stylesheet" href="../CSS/initialization.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+		<div class="browse_navigation">
+            <div class="navCenter">
+			    <ul>
+					<li class="topNav_homepage list">
+						  <a href="javascript:" class="link homepage">首页</a>
+						  <div class="home_interact line"></div>
+					</li>
+					<li class="topNav_trip list">
+						  <a href="javascript:" class="link trip">出行</a>
+    
+						  <div class="trip_interact line"></div>
+					</li>
+					<li class="topNav_hotel list">
+						  <a href="javascript:" class="link hotel ">旅游团</a>
+						  <div class="hote_interact line"></div>
+					</li>
+					<li class="topNav_group list">
+						  <a href="javascript:" class="link group ">酒店</a>
+						  <div class="grou_interact line"></div>
+					</li>
+					<li class="topNav_country list">
+						  <a href="javascript:" class="link country">国家游</a>
+						  <div class="coun_interact line"></div>
+					</li>
+			    </ul>
+			</div>
+			<div class="navRight">
+            	<ul>
+            		<li class="topNav_signIn right"><a href="HTML/signIn.html" class="link">登陆</a></li>
+            		<li class="right">|</li>
+            		<li class="topNav_signUp right"><a href="HTML/signIn.html" class="link">注册</a></li>
+            	</ul>
+            </div>
+		</div>
+  <div class="tourism_strategy">
+	<div class="strategy_box1">
+		<div class="strategy_Img1"></div>
+		<p class="strategy_text1">如果想要在雪地里看雪景的话，这些准备是非常必要的。因此冬天要穿的特别的厚实，这样看景的心情也比较好，如果想要用相机拍照，也要给相机带上保暖套。这样不仅可以给相机带来温暖，又可以保护它摔坏，而且要带着一个塑料袋，在见到肆月前要把相机放到塑料袋里面，在室内放一段时间后才能打开。这样对相机比较好。</p>
+	</div>
+	<div class="strategy_Img2">
+		<img src="../image/strategy_Img/strategy_Img2.jpg" alt="雾凇岛图片">
+	</div>
+	<div class="strategy_text2">雾凇岛特别的美丽，每到12月份和来年的2月，有许多人都会来雾凇岛游玩，来雾凇岛看雾凇，其实也是需要运气的。</div>
+	<div class="strategy_box2">
+		<div class="strategy_Img3"></div>
+		<p class="strategy_text3">以上就是小编给大家介绍的雾凇岛，雾凇岛特别适合冬天来游玩，因为可以看到好看的雾凇，有帮助的话请关注小编。</p>
+	</div>
+  </div>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+  <script type="text/javascript">
+        $(document).ready(function() {
+         	   var short_interact = $('.homepage').width() + "px";
+         	   var long_interact = $('.country').width() + "px";
+         	   // 下滑线长度
+
+         	  // 鼠标移动导航栏出现下划线开始
+         	   $(".homepage").mouseenter(function() {
+
+         	   	         $(".home_interact").css({"width": short_interact,"transition":"width 0.5s"})
+         	   });
+         	  $(".homepage").mouseleave(function() {
+         	  	        $(".home_interact").css({"width":"0","transition":"width 0.5s"})
+         	  });
+         	              // 首页
+              $(".trip").mouseenter(function() {
+
+         	   	         $(".trip_interact").css({"width": short_interact,"transition":"width 0.5s"})
+         	   });
+         	  $(".trip").mouseleave(function() {
+         	  	        $(".trip_interact").css({"width":"0","transition":"width 0.5s"})
+         	  });
+                           // 出行
+
+               $(".hotel").mouseenter(function() {
+
+         	   	         $(".hote_interact").css({"width": long_interact,"transition":"width 0.5s"})
+         	   });
+         	  $(".hotel").mouseleave(function() {
+         	  	        $(".hote_interact").css({"width":"0","transition":"width 0.5s"})
+         	  });
+                         // 旅游团
+               $(".group").mouseenter(function() {
+
+         	   	         $(".grou_interact").css({"width": short_interact,"transition":"width 0.5s"})
+         	   });
+         	  $(".group").mouseleave(function() {
+         	  	        $(".grou_interact").css({"width":"0","transition":"width 0.5s"})
+         	  });
+         	                 // 酒店
+
+         	   $(".country").mouseenter(function() {
+
+         	   	         $(".coun_interact").css({"width": long_interact,"transition":"width 0.5s"})
+         	   });
+         	  $(".country").mouseleave(function() {
+         	  	        $(".coun_interact").css({"width":"0","transition":"width 0.5s"})
+         	  });
+        });
+	</script>
+</body>
+</html>
